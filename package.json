@@ -95,7 +95,7 @@
     "@typescript-eslint/eslint-plugin": "^8.26.1",
     "@typescript-eslint/parser": "^8.26.1",
     "cypress": "^13.17.0",
-    "eslint": "^9.22.0",
+    "eslint": "^8.57.1",
     "git-describe": "^4.1.1",
     "htmlhint": "1.1.4",
     "https-proxy-agent": "2.2.1",
