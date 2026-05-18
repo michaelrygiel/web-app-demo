@@ -8,6 +8,7 @@ import { DeleteDialogComponent } from 'app/shared/delete-dialog/delete-dialog.co
 import { FormDialogComponent } from 'app/shared/form-dialog/form-dialog.component';
 import { DatepickerBase } from 'app/shared/form-dialog/formfield/model/datepicker-base';
 import { FormfieldBase } from 'app/shared/form-dialog/formfield/model/formfield-base';
+import { firstValueFrom } from 'rxjs';
 import { InputBase } from 'app/shared/form-dialog/formfield/model/input-base';
 
 @Component({
@@ -222,11 +223,8 @@ export class LoanTrancheDetailsComponent implements OnInit {
       dateFormat: this.settingsService.dateFormat,
       locale: this.settingsService.language.code
     };
-    this.loanServices
-      .editDisbursements(this.loanId, payload)
-      .toPromise()
-      .then((result) => {
-        this.pristine = true;
-      });
+    firstValueFrom(this.loanServices.editDisbursements(this.loanId, payload)).then((result) => {
+      this.pristine = true;
+    });
   }
 }

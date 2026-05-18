@@ -53,7 +53,7 @@ div {
   }
 }
 
-::ng-deep .mat-tooltip {
+::ng-deep .mat-mdc-tooltip {
   font-size: 15px;
   color: $white !important;
   background-color: rgba($status-approved, 0.7);

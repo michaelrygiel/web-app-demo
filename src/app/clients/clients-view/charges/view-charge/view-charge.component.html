@@ -14,7 +14,7 @@
 </div>
 
 <div class="container">
-  <mat-card>
+  <mat-card appearance="outlined">
     <mat-card-title>
       <i class="fa fa-stop" [ngClass]="!(chargeData.isWaived || chargeData.isPaid) | statusLookup"></i>
       {{ chargeData.name }}

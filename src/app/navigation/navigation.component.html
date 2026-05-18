@@ -1,7 +1,7 @@
 <div class="container">
   <div fxLayout="row wrap" fxLayout.lt-md="column" fxLayoutGap="2%">
     <div fxFlex="48%">
-      <mat-card fxLayout="column">
+      <mat-card appearance="outlined" fxLayout="column">
         <mat-card-content fxLayout="column">
           <mat-form-field *ngIf="!(officeData === undefined || officeData === null)">
             <mat-label>{{ 'labels.inputs.Office' | translate }}</mat-label>
@@ -52,7 +52,7 @@
     </div>
 
     <div fxFlex="48%">
-      <mat-card fxLayout="column" *ngIf="selectedItem">
+      <mat-card appearance="outlined" fxLayout="column" *ngIf="selectedItem">
         <ng-container *ngIf="selectedItem.itemType === 'office'">
           <mifosx-office-navigation
             [officeData]="selectedItem"

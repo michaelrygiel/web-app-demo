@@ -1,5 +1,5 @@
 <div class="container">
-  <mat-card>
+  <mat-card appearance="outlined">
     <form [formGroup]="hookForm" (ngSubmit)="submit()">
       <mat-card-content>
         <div fxLayout="row wrap" fxLayout.lt-md="column" fxLayoutGap="4%">
@@ -110,7 +110,7 @@
         <br />
 
         <div fxLayout="row wrap" fxLayout.lt-md="column">
-          <p fxFlex="20%" class="mat-title">
+          <p fxFlex="20%" class="mat-headline-6">
             {{ 'labels.inputs.Events' | translate }}<span style="color: red">*</span>
           </p>
 

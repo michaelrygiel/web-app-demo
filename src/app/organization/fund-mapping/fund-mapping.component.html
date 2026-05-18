@@ -1,4 +1,4 @@
-<mat-card class="container" *ngIf="!isCollapsed">
+<mat-card appearance="outlined" class="container" *ngIf="!isCollapsed">
   <form [formGroup]="fundMappingForm" (ngSubmit)="submit()">
     <div fxLayout="row wrap" fxLayoutGap="2%" fxLayout.lt-md="column" fxLayoutAlign.gt-sm="start center">
       <mat-form-field fxFlex="48%">
@@ -203,7 +203,7 @@
 </mat-card>
 
 <div class="container" *ngIf="isCollapsed">
-  <mat-card>
+  <mat-card appearance="outlined">
     <div class="m-b-20">
       <button mat-raised-button color="primary" (click)="isCollapsed = false">
         {{ 'labels.buttons.Parameters' | translate }}
