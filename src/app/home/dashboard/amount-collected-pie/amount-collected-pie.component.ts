@@ -7,7 +7,9 @@ import { ActivatedRoute } from '@angular/router';
 import { HomeService } from '../../home.service';
 
 /** Charting Imports */
-import Chart from 'chart.js';
+import { Chart, registerables } from 'chart.js';
+
+Chart.register(...registerables);
 
 /**
  * Amount Collected Pie Chart Component

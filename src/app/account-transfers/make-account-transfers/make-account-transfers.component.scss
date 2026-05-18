@@ -21,15 +21,14 @@ mat-divider {
   max-width: 37rem;
 }
 
-::ng-deep mat-form-field.error-warn.mat-mdc-form-field-invalid .mat-form-field-ripple {
+::ng-deep mat-form-field.error-warn.mat-mdc-form-field-invalid .mdc-line-ripple {
   background-color: #000000de !important;
 }
 
-::ng-deep mat-form-field.error-warn.mat-mdc-form-field-invalid .mat-form-field-label {
+::ng-deep mat-form-field.error-warn.mat-mdc-form-field-invalid .mdc-floating-label {
   color: #0009 !important;
 
-  /* TODO(mdc-migration): The following rule targets internal classes of form-field that may no longer apply for the MDC version. */
-  .mat-form-field-required-marker {
+  .mat-mdc-form-field-required-marker {
     color: #0009 !important;
   }
 }
