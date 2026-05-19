@@ -1,0 +1,46 @@
+/**
+ * Copyright since 2025 Mifos Initiative
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ */
+
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { of } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
+import { describe, it, expect, beforeEach } from '@jest/globals';
+import { SearchPageComponent } from './search-page.component';
+import { getCommonTestConfig } from '../../../test-config';
+
+describe('SearchPageComponent', () => {
+  let component: SearchPageComponent;
+  let fixture: ComponentFixture<SearchPageComponent>;
+
+  beforeEach(async () => {
+    const commonConfig = getCommonTestConfig();
+
+    const activatedRouteStub = {
+      data: of({ searchResults: [] })
+    };
+
+    await TestBed.configureTestingModule({
+      imports: [
+        SearchPageComponent,
+        ...(commonConfig.imports || [])
+      ],
+      providers: [
+        ...(commonConfig.providers || []),
+        { provide: ActivatedRoute, useValue: activatedRouteStub }],
+      schemas: commonConfig.schemas
+    }).compileComponents();
+
+    fixture = TestBed.createComponent(SearchPageComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});
