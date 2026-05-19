@@ -9,6 +9,7 @@ import { FormDialogComponent } from 'app/shared/form-dialog/form-dialog.componen
 import { DatepickerBase } from 'app/shared/form-dialog/formfield/model/datepicker-base';
 import { FormfieldBase } from 'app/shared/form-dialog/formfield/model/formfield-base';
 import { InputBase } from 'app/shared/form-dialog/formfield/model/input-base';
+import { firstValueFrom } from 'rxjs';
 
 @Component({
   selector: 'mifosx-loan-tranche-details',
@@ -222,11 +223,8 @@ export class LoanTrancheDetailsComponent implements OnInit {
       dateFormat: this.settingsService.dateFormat,
       locale: this.settingsService.language.code
     };
-    this.loanServices
-      .editDisbursements(this.loanId, payload)
-      .toPromise()
-      .then((result) => {
-        this.pristine = true;
-      });
+    firstValueFrom(this.loanServices.editDisbursements(this.loanId, payload)).then((result) => {
+      this.pristine = true;
+    });
   }
 }
