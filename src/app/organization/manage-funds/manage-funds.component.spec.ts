@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ManageFundsComponent } from './manage-funds.component';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('ManageFundsComponent', () => {
   let component: ManageFundsComponent;
@@ -8,6 +9,7 @@ describe('ManageFundsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ManageFundsComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('ManageFundsComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ManageFundsComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

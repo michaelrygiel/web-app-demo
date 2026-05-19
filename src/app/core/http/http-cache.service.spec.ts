@@ -1,3 +1,5 @@
+import { getTestConfigModule } from '../../testing/test-config';
+
 // import { TestBed, inject } from '@angular/core/testing';
 // import { HttpResponse } from '@angular/common/http';
 
@@ -10,9 +12,7 @@
 //   let response: HttpResponse<any>;
 
 //   beforeEach(() => {
-//     TestBed.configureTestingModule({
-//       providers: [HttpCacheService]
-//     });
+//     TestBed.configureTestingModule(getTestConfigModule());
 
 //     // Start fresh
 //     window.sessionStorage.removeItem(cachePersistenceKey);

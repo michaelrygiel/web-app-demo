@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ViewChargeComponent } from './view-charge.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('ViewChargeComponent', () => {
   let component: ViewChargeComponent;
@@ -8,6 +9,7 @@ describe('ViewChargeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ViewChargeComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('ViewChargeComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ViewChargeComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

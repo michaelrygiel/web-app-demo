@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { GlAccountSelectorComponent } from './gl-account-selector.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('GlAccountSelectorComponent', () => {
   let component: GlAccountSelectorComponent;
@@ -8,12 +9,12 @@ describe('GlAccountSelectorComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [GlAccountSelectorComponent]
     }).compileComponents();
 
     fixture = TestBed.createComponent(GlAccountSelectorComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

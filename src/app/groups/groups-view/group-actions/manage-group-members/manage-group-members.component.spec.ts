@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ManageGroupMembersComponent } from './manage-group-members.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('ManageGroupMembersComponent', () => {
   let component: ManageGroupMembersComponent;
@@ -8,6 +9,7 @@ describe('ManageGroupMembersComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ManageGroupMembersComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('ManageGroupMembersComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ManageGroupMembersComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

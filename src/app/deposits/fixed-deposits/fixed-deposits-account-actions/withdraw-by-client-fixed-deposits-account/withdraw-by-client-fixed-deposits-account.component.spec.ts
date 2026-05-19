@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WithdrawByClientFixedDepositsAccountComponent } from './withdraw-by-client-fixed-deposits-account.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('WithdrawByClientFixedDepositsAccountComponent', () => {
   let component: WithdrawByClientFixedDepositsAccountComponent;
@@ -8,6 +9,7 @@ describe('WithdrawByClientFixedDepositsAccountComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [WithdrawByClientFixedDepositsAccountComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('WithdrawByClientFixedDepositsAccountComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(WithdrawByClientFixedDepositsAccountComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

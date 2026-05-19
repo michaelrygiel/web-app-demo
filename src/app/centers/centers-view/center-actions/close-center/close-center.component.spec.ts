@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CloseCenterComponent } from './close-center.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('CloseCenterComponent', () => {
   let component: CloseCenterComponent;
@@ -8,6 +9,7 @@ describe('CloseCenterComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [CloseCenterComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('CloseCenterComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CloseCenterComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

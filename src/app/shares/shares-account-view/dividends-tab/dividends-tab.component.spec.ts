@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DividendsTabComponent } from './dividends-tab.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('DividendsTabComponent', () => {
   let component: DividendsTabComponent;
@@ -8,6 +9,7 @@ describe('DividendsTabComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [DividendsTabComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('DividendsTabComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(DividendsTabComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

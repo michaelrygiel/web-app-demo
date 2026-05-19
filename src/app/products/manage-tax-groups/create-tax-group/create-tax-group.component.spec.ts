@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CreateTaxGroupComponent } from './create-tax-group.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('CreateTaxGroupComponent', () => {
   let component: CreateTaxGroupComponent;
@@ -8,6 +9,7 @@ describe('CreateTaxGroupComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [CreateTaxGroupComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('CreateTaxGroupComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CreateTaxGroupComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

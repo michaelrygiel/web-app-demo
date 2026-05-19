@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AmountDisbursedPieComponent } from './amount-disbursed-pie.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('AmountDisbursedPieComponent', () => {
   let component: AmountDisbursedPieComponent;
@@ -8,6 +9,7 @@ describe('AmountDisbursedPieComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [AmountDisbursedPieComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('AmountDisbursedPieComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(AmountDisbursedPieComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

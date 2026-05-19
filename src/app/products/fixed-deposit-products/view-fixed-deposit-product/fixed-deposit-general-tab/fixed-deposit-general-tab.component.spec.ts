@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FixedDepositGeneralTabComponent } from './fixed-deposit-general-tab.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('FixedDepositGeneralTabComponent', () => {
   let component: FixedDepositGeneralTabComponent;
@@ -8,6 +9,7 @@ describe('FixedDepositGeneralTabComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [FixedDepositGeneralTabComponent]
     }).compileComponents();
   });
@@ -15,7 +17,6 @@ describe('FixedDepositGeneralTabComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(FixedDepositGeneralTabComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

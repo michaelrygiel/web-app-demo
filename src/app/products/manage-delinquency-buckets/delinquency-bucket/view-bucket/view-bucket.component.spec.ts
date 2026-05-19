@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ViewBucketComponent } from './view-bucket.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('ViewBucketComponent', () => {
   let component: ViewBucketComponent;
@@ -8,6 +9,7 @@ describe('ViewBucketComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ViewBucketComponent]
     }).compileComponents();
   });
@@ -15,7 +17,6 @@ describe('ViewBucketComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ViewBucketComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

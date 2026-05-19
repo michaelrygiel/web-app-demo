@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EditFloatingRateComponent } from './edit-floating-rate.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('EditFloatingRateComponent', () => {
   let component: EditFloatingRateComponent;
@@ -8,6 +9,7 @@ describe('EditFloatingRateComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [EditFloatingRateComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('EditFloatingRateComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(EditFloatingRateComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

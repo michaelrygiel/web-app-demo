@@ -1,3 +1,5 @@
+import { getTestConfigModule } from '../../testing/test-config';
+
 // import { TestBed, inject } from '@angular/core/testing';
 // import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 // import { HttpClient, HttpInterceptor } from '@angular/common/http';
@@ -14,19 +16,7 @@
 //   let httpMock: HttpTestingController;
 
 //   beforeEach(() => {
-//     TestBed.configureTestingModule({
-//       imports: [HttpClientTestingModule],
-//       providers: [
-//         ErrorHandlerInterceptor,
-//         CacheInterceptor,
-//         ApiPrefixInterceptor,
-//         HttpCacheService,
-//         {
-//           provide: HttpClient,
-//           useClass: HttpService
-//         },
-//       ]
-//     });
+//     TestBed.configureTestingModule(getTestConfigModule());
 //   });
 
 //   beforeEach(inject([

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SavingProductSettingsStepComponent } from './saving-product-settings-step.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('SavingProductSettingsStepComponent', () => {
   let component: SavingProductSettingsStepComponent;
@@ -8,6 +9,7 @@ describe('SavingProductSettingsStepComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [SavingProductSettingsStepComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('SavingProductSettingsStepComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(SavingProductSettingsStepComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

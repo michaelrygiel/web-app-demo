@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { OriginalScheduleTabComponent } from './original-schedule-tab.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('OriginalScheduleTabComponent', () => {
   let component: OriginalScheduleTabComponent;
@@ -8,6 +9,7 @@ describe('OriginalScheduleTabComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [OriginalScheduleTabComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('OriginalScheduleTabComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(OriginalScheduleTabComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

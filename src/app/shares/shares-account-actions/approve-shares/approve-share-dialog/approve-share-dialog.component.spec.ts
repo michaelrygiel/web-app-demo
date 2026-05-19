@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ApproveShareDialogComponent } from './approve-share-dialog.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 describe('ApproveShareDialogComponent', () => {
   let component: ApproveShareDialogComponent;
@@ -8,14 +10,18 @@ describe('ApproveShareDialogComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ApproveShareDialogComponent]
+      ...getTestConfigModule(),
+      declarations: [ApproveShareDialogComponent],
+      providers: [
+        ...(getTestConfigModule().providers || []),
+        { provide: MatDialogRef, useValue: { updateSize: () => {}, close: () => {} } },
+        { provide: MAT_DIALOG_DATA, useValue: {} }]
     }).compileComponents();
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(ApproveShareDialogComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

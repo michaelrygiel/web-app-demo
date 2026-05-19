@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ExportTransactionsComponent } from './export-transactions.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('ExportTransactionsComponent', () => {
   let component: ExportTransactionsComponent;
@@ -8,6 +9,7 @@ describe('ExportTransactionsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ExportTransactionsComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('ExportTransactionsComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ExportTransactionsComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

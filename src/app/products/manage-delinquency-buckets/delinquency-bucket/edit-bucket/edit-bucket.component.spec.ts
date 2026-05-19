@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EditBucketComponent } from './edit-bucket.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('EditBucketComponent', () => {
   let component: EditBucketComponent;
@@ -8,6 +9,7 @@ describe('EditBucketComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [EditBucketComponent]
     }).compileComponents();
   });
@@ -15,7 +17,6 @@ describe('EditBucketComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(EditBucketComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

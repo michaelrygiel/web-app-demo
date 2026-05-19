@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EditGroupMeetingComponent } from './edit-group-meeting.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('EditGroupMeetingComponent', () => {
   let component: EditGroupMeetingComponent;
@@ -8,6 +9,7 @@ describe('EditGroupMeetingComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [EditGroupMeetingComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('EditGroupMeetingComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(EditGroupMeetingComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

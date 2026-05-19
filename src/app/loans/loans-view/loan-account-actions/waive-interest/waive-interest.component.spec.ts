@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WaiveInterestComponent } from './waive-interest.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('WaiveInterestComponent', () => {
   let component: WaiveInterestComponent;
@@ -8,6 +9,7 @@ describe('WaiveInterestComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [WaiveInterestComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('WaiveInterestComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(WaiveInterestComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { GroupNavigationComponent } from './group-navigation.component';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('GroupNavigationComponent', () => {
   let component: GroupNavigationComponent;
@@ -8,6 +9,7 @@ describe('GroupNavigationComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [GroupNavigationComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('GroupNavigationComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(GroupNavigationComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

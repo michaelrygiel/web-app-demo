@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EntityDatatableTabComponent } from './entity-datatable-tab.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('EntityDatatableTabComponent', () => {
   let component: EntityDatatableTabComponent;
@@ -8,6 +9,7 @@ describe('EntityDatatableTabComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [EntityDatatableTabComponent]
     }).compileComponents();
   });
@@ -15,7 +17,6 @@ describe('EntityDatatableTabComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(EntityDatatableTabComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

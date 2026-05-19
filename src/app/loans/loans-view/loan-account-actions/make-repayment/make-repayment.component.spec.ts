@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MakeRepaymentComponent } from './make-repayment.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('MakeRepaymentComponent', () => {
   let component: MakeRepaymentComponent;
@@ -8,6 +9,7 @@ describe('MakeRepaymentComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [MakeRepaymentComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('MakeRepaymentComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(MakeRepaymentComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

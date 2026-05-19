@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SearchToolComponent } from './search-tool.component';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('SearchToolComponent', () => {
   let component: SearchToolComponent;
@@ -8,6 +9,7 @@ describe('SearchToolComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [SearchToolComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('SearchToolComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(SearchToolComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

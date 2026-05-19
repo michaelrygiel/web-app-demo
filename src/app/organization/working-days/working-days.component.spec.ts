@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WorkingDaysComponent } from './working-days.component';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('WorkingDaysComponent', () => {
   let component: WorkingDaysComponent;
@@ -8,6 +9,7 @@ describe('WorkingDaysComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [WorkingDaysComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('WorkingDaysComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(WorkingDaysComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

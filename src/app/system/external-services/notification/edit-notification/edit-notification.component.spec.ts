@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EditNotificationComponent } from './edit-notification.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('EditNotificationComponent', () => {
   let component: EditNotificationComponent;
@@ -8,6 +9,7 @@ describe('EditNotificationComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [EditNotificationComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('EditNotificationComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(EditNotificationComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

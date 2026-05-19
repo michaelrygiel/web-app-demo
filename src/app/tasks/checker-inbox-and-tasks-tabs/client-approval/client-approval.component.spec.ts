@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ClientApprovalComponent } from './client-approval.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('ClientApprovalComponent', () => {
   let component: ClientApprovalComponent;
@@ -8,6 +9,7 @@ describe('ClientApprovalComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ClientApprovalComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('ClientApprovalComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ClientApprovalComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

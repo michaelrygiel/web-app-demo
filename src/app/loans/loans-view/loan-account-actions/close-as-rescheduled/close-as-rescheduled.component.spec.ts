@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CloseAsRescheduledComponent } from './close-as-rescheduled.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('CloseAsRescheduledComponent', () => {
   let component: CloseAsRescheduledComponent;
@@ -8,6 +9,7 @@ describe('CloseAsRescheduledComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [CloseAsRescheduledComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('CloseAsRescheduledComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CloseAsRescheduledComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

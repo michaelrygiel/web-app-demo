@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FamilyMembersTabComponent } from './family-members-tab.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('FamilyMembersTabComponent', () => {
   let component: FamilyMembersTabComponent;
@@ -8,6 +9,7 @@ describe('FamilyMembersTabComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [FamilyMembersTabComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('FamilyMembersTabComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(FamilyMembersTabComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

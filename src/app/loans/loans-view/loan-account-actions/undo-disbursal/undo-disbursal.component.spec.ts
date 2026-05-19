@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UndoDisbursalComponent } from './undo-disbursal.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('UndoDisbursalComponent', () => {
   let component: UndoDisbursalComponent;
@@ -8,6 +9,7 @@ describe('UndoDisbursalComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [UndoDisbursalComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('UndoDisbursalComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(UndoDisbursalComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

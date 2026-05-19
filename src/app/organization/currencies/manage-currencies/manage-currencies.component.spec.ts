@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ManageCurrenciesComponent } from './manage-currencies.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('ManageCurrenciesComponent', () => {
   let component: ManageCurrenciesComponent;
@@ -8,6 +9,7 @@ describe('ManageCurrenciesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ManageCurrenciesComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('ManageCurrenciesComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ManageCurrenciesComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

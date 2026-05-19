@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ViewHookComponent } from './view-hook.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('ViewHookComponent', () => {
   let component: ViewHookComponent;
@@ -8,6 +9,7 @@ describe('ViewHookComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ViewHookComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('ViewHookComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ViewHookComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

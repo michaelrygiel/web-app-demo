@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NotificationsTrayComponent } from './notifications-tray.component';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('NotificationsTrayComponent', () => {
   let component: NotificationsTrayComponent;
@@ -8,6 +9,7 @@ describe('NotificationsTrayComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [NotificationsTrayComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('NotificationsTrayComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(NotificationsTrayComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

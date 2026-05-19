@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ActivateSavingsAccountComponent } from './activate-savings-account.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('ActivateSavingsAccountComponent', () => {
   let component: ActivateSavingsAccountComponent;
@@ -8,6 +9,7 @@ describe('ActivateSavingsAccountComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ActivateSavingsAccountComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('ActivateSavingsAccountComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ActivateSavingsAccountComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

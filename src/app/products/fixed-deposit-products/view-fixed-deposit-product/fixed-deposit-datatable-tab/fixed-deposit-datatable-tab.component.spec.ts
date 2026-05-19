@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FixedDepositDatatableTabComponent } from './fixed-deposit-datatable-tab.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('FixedDepositDatatableTabComponent', () => {
   let component: FixedDepositDatatableTabComponent;
@@ -8,6 +9,7 @@ describe('FixedDepositDatatableTabComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [FixedDepositDatatableTabComponent]
     }).compileComponents();
   });
@@ -15,7 +17,6 @@ describe('FixedDepositDatatableTabComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(FixedDepositDatatableTabComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

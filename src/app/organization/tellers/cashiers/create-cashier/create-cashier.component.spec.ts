@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CreateCashierComponent } from './create-cashier.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('CreateCashierComponent', () => {
   let component: CreateCashierComponent;
@@ -8,6 +9,7 @@ describe('CreateCashierComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [CreateCashierComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('CreateCashierComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CreateCashierComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

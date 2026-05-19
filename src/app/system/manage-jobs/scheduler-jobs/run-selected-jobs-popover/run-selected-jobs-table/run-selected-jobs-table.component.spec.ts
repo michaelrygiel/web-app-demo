@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RunSelectedJobsTableComponent } from './run-selected-jobs-table.component';
+import { getTestConfigModule } from '../../../../../testing/test-config';
 
 describe('RunSelectedJobsTableComponent', () => {
   let component: RunSelectedJobsTableComponent;
@@ -8,12 +9,12 @@ describe('RunSelectedJobsTableComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [RunSelectedJobsTableComponent]
     }).compileComponents();
 
     fixture = TestBed.createComponent(RunSelectedJobsTableComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DelinquencyBucketComponent } from './delinquency-bucket.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('DelinquencyBucketComponent', () => {
   let component: DelinquencyBucketComponent;
@@ -8,6 +9,7 @@ describe('DelinquencyBucketComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [DelinquencyBucketComponent]
     }).compileComponents();
   });
@@ -15,7 +17,6 @@ describe('DelinquencyBucketComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(DelinquencyBucketComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

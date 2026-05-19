@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SvgIconComponent } from './svg-icon.component';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('SvgIconComponent', () => {
   let component: SvgIconComponent;
@@ -8,6 +9,7 @@ describe('SvgIconComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [SvgIconComponent]
     }).compileComponents();
   });
@@ -15,7 +17,6 @@ describe('SvgIconComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(SvgIconComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

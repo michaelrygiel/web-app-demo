@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CreateGsimAccountComponent } from './create-gsim-account.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('CreateGsimAccountComponent', () => {
   let component: CreateGsimAccountComponent;
@@ -8,6 +9,7 @@ describe('CreateGsimAccountComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [CreateGsimAccountComponent]
     }).compileComponents();
   });
@@ -15,7 +17,6 @@ describe('CreateGsimAccountComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CreateGsimAccountComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

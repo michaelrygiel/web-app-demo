@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ChargeOffComponent } from './charge-off.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('ChargeOffComponent', () => {
   let component: ChargeOffComponent;
@@ -8,6 +9,7 @@ describe('ChargeOffComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ChargeOffComponent]
     }).compileComponents();
   });
@@ -15,7 +17,6 @@ describe('ChargeOffComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ChargeOffComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

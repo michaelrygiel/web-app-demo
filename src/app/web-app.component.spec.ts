@@ -3,17 +3,11 @@ import { RouterTestingModule } from '@angular/router/testing';
 
 import { CoreModule } from './core/core.module';
 import { WebAppComponent } from './web-app.component';
+import { getTestConfigModule } from './testing/test-config';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule,
-        CoreModule
-      ],
-      declarations: [WebAppComponent],
-      providers: []
-    });
+    TestBed.configureTestingModule(getTestConfigModule());
     TestBed.compileComponents();
   }));
 

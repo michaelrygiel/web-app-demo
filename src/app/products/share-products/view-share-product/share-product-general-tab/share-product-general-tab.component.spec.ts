@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ShareProductGeneralTabComponent } from './share-product-general-tab.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('ShareProductGeneralTabComponent', () => {
   let component: ShareProductGeneralTabComponent;
@@ -8,6 +9,7 @@ describe('ShareProductGeneralTabComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ShareProductGeneralTabComponent]
     }).compileComponents();
   });
@@ -15,7 +17,6 @@ describe('ShareProductGeneralTabComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ShareProductGeneralTabComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

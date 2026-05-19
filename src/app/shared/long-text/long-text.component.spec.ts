@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LongTextComponent } from './long-text.component';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('LongTextComponent', () => {
   let component: LongTextComponent;
@@ -8,12 +9,12 @@ describe('LongTextComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [LongTextComponent]
     }).compileComponents();
 
     fixture = TestBed.createComponent(LongTextComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

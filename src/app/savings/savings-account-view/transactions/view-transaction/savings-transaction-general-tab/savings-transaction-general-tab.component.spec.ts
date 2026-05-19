@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SavingsTransactionGeneralTabComponent } from './savings-transaction-general-tab.component';
+import { getTestConfigModule } from '../../../../../testing/test-config';
 
 describe('SavingsTransactionGeneralTabComponent', () => {
   let component: SavingsTransactionGeneralTabComponent;
@@ -8,12 +9,12 @@ describe('SavingsTransactionGeneralTabComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [SavingsTransactionGeneralTabComponent]
     }).compileComponents();
 
     fixture = TestBed.createComponent(SavingsTransactionGeneralTabComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

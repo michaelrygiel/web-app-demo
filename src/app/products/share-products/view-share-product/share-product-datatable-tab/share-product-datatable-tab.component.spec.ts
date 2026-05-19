@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ShareProductDatatableTabComponent } from './share-product-datatable-tab.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('ShareProductDatatableTabComponent', () => {
   let component: ShareProductDatatableTabComponent;
@@ -8,6 +9,7 @@ describe('ShareProductDatatableTabComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ShareProductDatatableTabComponent]
     }).compileComponents();
   });
@@ -15,7 +17,6 @@ describe('ShareProductDatatableTabComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ShareProductDatatableTabComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

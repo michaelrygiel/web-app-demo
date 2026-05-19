@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { GroupAssignStaffComponent } from './group-assign-staff.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('GroupAssignStaffComponent', () => {
   let component: GroupAssignStaffComponent;
@@ -8,6 +9,7 @@ describe('GroupAssignStaffComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [GroupAssignStaffComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('GroupAssignStaffComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(GroupAssignStaffComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

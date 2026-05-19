@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CreateGuarantorComponent } from './create-guarantor.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('CreateGuarantorComponent', () => {
   let component: CreateGuarantorComponent;
@@ -8,6 +9,7 @@ describe('CreateGuarantorComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [CreateGuarantorComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('CreateGuarantorComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CreateGuarantorComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

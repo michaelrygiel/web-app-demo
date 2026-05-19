@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AddClientCollateralComponent } from './add-client-collateral.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('AddClientCollateralComponent', () => {
   let component: AddClientCollateralComponent;
@@ -8,6 +9,7 @@ describe('AddClientCollateralComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [AddClientCollateralComponent]
     }).compileComponents();
   });
@@ -15,7 +17,6 @@ describe('AddClientCollateralComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(AddClientCollateralComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

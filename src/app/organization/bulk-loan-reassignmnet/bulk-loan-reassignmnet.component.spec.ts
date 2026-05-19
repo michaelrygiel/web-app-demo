@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BulkLoanReassignmnetComponent } from './bulk-loan-reassignmnet.component';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('BulkLoanReassignmnetComponent', () => {
   let component: BulkLoanReassignmnetComponent;
@@ -8,6 +9,7 @@ describe('BulkLoanReassignmnetComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [BulkLoanReassignmnetComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('BulkLoanReassignmnetComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(BulkLoanReassignmnetComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

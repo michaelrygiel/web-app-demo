@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SmsCampaignStepComponent } from './sms-campaign-step.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('SmsCampaignStepComponent', () => {
   let component: SmsCampaignStepComponent;
@@ -8,6 +9,7 @@ describe('SmsCampaignStepComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [SmsCampaignStepComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('SmsCampaignStepComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(SmsCampaignStepComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

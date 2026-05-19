@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CreateTellerComponent } from './create-teller.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('CreateTellerComponent', () => {
   let component: CreateTellerComponent;
@@ -8,6 +9,7 @@ describe('CreateTellerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [CreateTellerComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('CreateTellerComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CreateTellerComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

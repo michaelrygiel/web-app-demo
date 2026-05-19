@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WithdrawByClientSavingsAccountComponent } from './withdraw-by-client-savings-account.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('WithdrawByClientSavingsAccountComponent', () => {
   let component: WithdrawByClientSavingsAccountComponent;
@@ -8,6 +9,7 @@ describe('WithdrawByClientSavingsAccountComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [WithdrawByClientSavingsAccountComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('WithdrawByClientSavingsAccountComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(WithdrawByClientSavingsAccountComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

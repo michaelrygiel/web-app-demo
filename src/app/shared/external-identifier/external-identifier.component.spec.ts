@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ExternalIdentifierComponent } from './external-identifier.component';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('ExternalIdentifierComponent', () => {
   let component: ExternalIdentifierComponent;
@@ -8,6 +9,7 @@ describe('ExternalIdentifierComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ExternalIdentifierComponent]
     }).compileComponents();
   });
@@ -15,7 +17,6 @@ describe('ExternalIdentifierComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ExternalIdentifierComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

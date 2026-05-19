@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RunReportComponent } from './run-report.component';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('RunReportComponent', () => {
   let component: RunReportComponent;
@@ -8,6 +9,7 @@ describe('RunReportComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [RunReportComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('RunReportComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(RunReportComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

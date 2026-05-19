@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UndoClientRejectionComponent } from './undo-client-rejection.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('UndoClientRejectionComponent', () => {
   let component: UndoClientRejectionComponent;
@@ -8,6 +9,7 @@ describe('UndoClientRejectionComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [UndoClientRejectionComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('UndoClientRejectionComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(UndoClientRejectionComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

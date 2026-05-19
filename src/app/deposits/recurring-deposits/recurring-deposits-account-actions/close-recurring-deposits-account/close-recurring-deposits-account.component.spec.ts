@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CloseRecurringDepositsAccountComponent } from './close-recurring-deposits-account.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('CloseRecurringDepositsAccountComponent', () => {
   let component: CloseRecurringDepositsAccountComponent;
@@ -8,6 +9,7 @@ describe('CloseRecurringDepositsAccountComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [CloseRecurringDepositsAccountComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('CloseRecurringDepositsAccountComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CloseRecurringDepositsAccountComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

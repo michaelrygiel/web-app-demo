@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RolesAndPermissionsComponent } from './roles-and-permissions.component';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('RolesAndPermissionsComponent', () => {
   let component: RolesAndPermissionsComponent;
@@ -8,6 +9,7 @@ describe('RolesAndPermissionsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [RolesAndPermissionsComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('RolesAndPermissionsComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(RolesAndPermissionsComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { OverdueChargesTabComponent } from './overdue-charges-tab.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('OverdueChargesTabComponent', () => {
   let component: OverdueChargesTabComponent;
@@ -8,6 +9,7 @@ describe('OverdueChargesTabComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [OverdueChargesTabComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('OverdueChargesTabComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(OverdueChargesTabComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

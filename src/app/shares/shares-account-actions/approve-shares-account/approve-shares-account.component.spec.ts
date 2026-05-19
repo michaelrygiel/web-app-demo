@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ApproveSharesAccountComponent } from './approve-shares-account.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('ApproveSharesAccountComponent', () => {
   let component: ApproveSharesAccountComponent;
@@ -8,6 +9,7 @@ describe('ApproveSharesAccountComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ApproveSharesAccountComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('ApproveSharesAccountComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ApproveSharesAccountComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

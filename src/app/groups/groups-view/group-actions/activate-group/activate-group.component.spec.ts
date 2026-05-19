@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ActivateGroupComponent } from './activate-group.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('ActivateGroupComponent', () => {
   let component: ActivateGroupComponent;
@@ -8,6 +9,7 @@ describe('ActivateGroupComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ActivateGroupComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('ActivateGroupComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ActivateGroupComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

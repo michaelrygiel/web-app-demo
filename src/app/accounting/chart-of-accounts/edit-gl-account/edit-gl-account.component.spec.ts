@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EditGlAccountComponent } from './edit-gl-account.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('EditGlAccountComponent', () => {
   let component: EditGlAccountComponent;
@@ -8,6 +9,7 @@ describe('EditGlAccountComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [EditGlAccountComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('EditGlAccountComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(EditGlAccountComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

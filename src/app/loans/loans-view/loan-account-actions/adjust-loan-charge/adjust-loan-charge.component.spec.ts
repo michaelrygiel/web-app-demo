@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AdjustLoanChargeComponent } from './adjust-loan-charge.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('AdjustLoanChargeComponent', () => {
   let component: AdjustLoanChargeComponent;
@@ -8,6 +9,7 @@ describe('AdjustLoanChargeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [AdjustLoanChargeComponent]
     }).compileComponents();
   });
@@ -15,7 +17,6 @@ describe('AdjustLoanChargeComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(AdjustLoanChargeComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

@@ -1,4 +1,5 @@
 import { StatusLookupPipe } from './status-lookup.pipe';
+import { getTestConfigModule } from '../testing/test-config';
 
 describe('StatusLookupPipe', () => {
   it('create an instance', () => {

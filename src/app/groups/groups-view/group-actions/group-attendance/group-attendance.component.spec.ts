@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { GroupAttendanceComponent } from './group-attendance.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('GroupAttendanceComponent', () => {
   let component: GroupAttendanceComponent;
@@ -8,6 +9,7 @@ describe('GroupAttendanceComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [GroupAttendanceComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('GroupAttendanceComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(GroupAttendanceComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

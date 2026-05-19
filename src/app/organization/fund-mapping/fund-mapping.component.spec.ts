@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FundMappingComponent } from './fund-mapping.component';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('FundMappingComponent', () => {
   let component: FundMappingComponent;
@@ -8,6 +9,7 @@ describe('FundMappingComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [FundMappingComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('FundMappingComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(FundMappingComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

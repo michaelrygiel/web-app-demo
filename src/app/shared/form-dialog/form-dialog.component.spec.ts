@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FormDialogComponent } from './form-dialog.component';
+import { getTestConfigModule } from '../../testing/test-config';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 describe('FormDialogComponent', () => {
   let component: FormDialogComponent;
@@ -8,14 +10,18 @@ describe('FormDialogComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [FormDialogComponent]
+      ...getTestConfigModule(),
+      declarations: [FormDialogComponent],
+      providers: [
+        ...(getTestConfigModule().providers || []),
+        { provide: MatDialogRef, useValue: { updateSize: () => {}, close: () => {} } },
+        { provide: MAT_DIALOG_DATA, useValue: { formfields: [], layout: {} } }]
     }).compileComponents();
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(FormDialogComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

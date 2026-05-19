@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AssetTransferLoanComponent } from './asset-transfer-loan.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('AssetTransferLoanComponent', () => {
   let component: AssetTransferLoanComponent;
@@ -8,6 +9,7 @@ describe('AssetTransferLoanComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [AssetTransferLoanComponent]
     }).compileComponents();
   });
@@ -15,7 +17,6 @@ describe('AssetTransferLoanComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(AssetTransferLoanComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

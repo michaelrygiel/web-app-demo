@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ClosingEntriesComponent } from './closing-entries.component';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('ClosingEntriesComponent', () => {
   let component: ClosingEntriesComponent;
@@ -8,6 +9,7 @@ describe('ClosingEntriesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ClosingEntriesComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('ClosingEntriesComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ClosingEntriesComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

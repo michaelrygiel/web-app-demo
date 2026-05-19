@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ViewOfficeComponent } from './view-office.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('ViewOfficeComponent', () => {
   let component: ViewOfficeComponent;
@@ -8,6 +9,7 @@ describe('ViewOfficeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ViewOfficeComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('ViewOfficeComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ViewOfficeComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

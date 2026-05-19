@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TwoFactorAuthenticationComponent } from './two-factor-authentication.component';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('TwoFactorAuthenticationComponent', () => {
   let component: TwoFactorAuthenticationComponent;
@@ -8,6 +9,7 @@ describe('TwoFactorAuthenticationComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [TwoFactorAuthenticationComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('TwoFactorAuthenticationComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(TwoFactorAuthenticationComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

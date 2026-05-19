@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CreatePaymentTypeComponent } from './create-payment-type.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('CreatePaymentTypeComponent', () => {
   let component: CreatePaymentTypeComponent;
@@ -8,6 +9,7 @@ describe('CreatePaymentTypeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [CreatePaymentTypeComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('CreatePaymentTypeComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CreatePaymentTypeComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FormfieldComponent } from './formfield.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('FormfieldComponent', () => {
   let component: FormfieldComponent;
@@ -8,6 +9,7 @@ describe('FormfieldComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [FormfieldComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('FormfieldComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(FormfieldComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

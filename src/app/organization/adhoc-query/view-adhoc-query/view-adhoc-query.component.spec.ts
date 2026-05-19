@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ViewAdhocQueryComponent } from './view-adhoc-query.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('ViewAdhocQueryComponent', () => {
   let component: ViewAdhocQueryComponent;
@@ -8,6 +9,7 @@ describe('ViewAdhocQueryComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ViewAdhocQueryComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('ViewAdhocQueryComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ViewAdhocQueryComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

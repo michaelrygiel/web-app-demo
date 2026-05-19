@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LoanDelinquencyTagsTabComponent } from './loan-delinquency-tags-tab.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('LoanDelinquencyTagsTabComponent', () => {
   let component: LoanDelinquencyTagsTabComponent;
@@ -8,6 +9,7 @@ describe('LoanDelinquencyTagsTabComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [LoanDelinquencyTagsTabComponent]
     }).compileComponents();
   });
@@ -15,7 +17,6 @@ describe('LoanDelinquencyTagsTabComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(LoanDelinquencyTagsTabComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

@@ -1,4 +1,5 @@
 import { LoansRoutingModule } from './loans-routing.module';
+import { getTestConfigModule } from '../testing/test-config';
 
 describe('LoansRoutingModule', () => {
   let loansRoutingModule: LoansRoutingModule;

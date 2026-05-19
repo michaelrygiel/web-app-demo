@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DatatableSingleRowComponent } from './datatable-single-row.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('DatatableSingleRowComponent', () => {
   let component: DatatableSingleRowComponent;
@@ -8,6 +9,7 @@ describe('DatatableSingleRowComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [DatatableSingleRowComponent]
     }).compileComponents();
   });
@@ -15,7 +17,6 @@ describe('DatatableSingleRowComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(DatatableSingleRowComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

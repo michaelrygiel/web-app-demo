@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DocumentsTabComponent } from './documents-tab.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('DocumentsTabComponent', () => {
   let component: DocumentsTabComponent;
@@ -8,6 +9,7 @@ describe('DocumentsTabComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [DocumentsTabComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('DocumentsTabComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(DocumentsTabComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

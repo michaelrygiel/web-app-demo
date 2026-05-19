@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ViewClosureComponent } from './view-closure.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('ViewClosureComponent', () => {
   let component: ViewClosureComponent;
@@ -8,6 +9,7 @@ describe('ViewClosureComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ViewClosureComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('ViewClosureComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ViewClosureComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

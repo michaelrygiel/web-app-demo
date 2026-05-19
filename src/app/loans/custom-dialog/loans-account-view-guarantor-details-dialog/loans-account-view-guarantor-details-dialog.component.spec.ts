@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LoansAccountViewGuarantorDetailsDialogComponent } from './loans-account-view-guarantor-details-dialog.component';
+import { getTestConfigModule } from '../../../testing/test-config';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 describe('LoansAccountViewGuarantorDetailsDialogComponent', () => {
   let component: LoansAccountViewGuarantorDetailsDialogComponent;
@@ -8,14 +10,18 @@ describe('LoansAccountViewGuarantorDetailsDialogComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [LoansAccountViewGuarantorDetailsDialogComponent]
+      ...getTestConfigModule(),
+      declarations: [LoansAccountViewGuarantorDetailsDialogComponent],
+      providers: [
+        ...(getTestConfigModule().providers || []),
+        { provide: MatDialogRef, useValue: { updateSize: () => {}, close: () => {} } },
+        { provide: MAT_DIALOG_DATA, useValue: {} }]
     }).compileComponents();
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(LoansAccountViewGuarantorDetailsDialogComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

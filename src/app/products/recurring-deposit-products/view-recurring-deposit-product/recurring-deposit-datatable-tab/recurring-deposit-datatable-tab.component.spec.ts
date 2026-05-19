@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RecurringDepositDatatableTabComponent } from './recurring-deposit-datatable-tab.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('RecurringDepositDatatableTabComponent', () => {
   let component: RecurringDepositDatatableTabComponent;
@@ -8,6 +9,7 @@ describe('RecurringDepositDatatableTabComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [RecurringDepositDatatableTabComponent]
     }).compileComponents();
   });
@@ -15,7 +17,6 @@ describe('RecurringDepositDatatableTabComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(RecurringDepositDatatableTabComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

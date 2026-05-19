@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LoanProductDetailsStepComponent } from './loan-product-details-step.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('LoanProductDetailsStepComponent', () => {
   let component: LoanProductDetailsStepComponent;
@@ -8,6 +9,7 @@ describe('LoanProductDetailsStepComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [LoanProductDetailsStepComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('LoanProductDetailsStepComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(LoanProductDetailsStepComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

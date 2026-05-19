@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { OrganizationComponent } from './organization.component';
+import { getTestConfigModule } from '../testing/test-config';
 
 describe('OrganizationComponent', () => {
   let component: OrganizationComponent;
@@ -8,6 +9,7 @@ describe('OrganizationComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [OrganizationComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('OrganizationComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(OrganizationComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

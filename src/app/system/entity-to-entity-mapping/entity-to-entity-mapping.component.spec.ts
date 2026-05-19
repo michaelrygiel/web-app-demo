@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EntityToEntityMappingComponent } from './entity-to-entity-mapping.component';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('EntityToEntityMappingComponent', () => {
   let component: EntityToEntityMappingComponent;
@@ -8,6 +9,7 @@ describe('EntityToEntityMappingComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [EntityToEntityMappingComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('EntityToEntityMappingComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(EntityToEntityMappingComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SettleCashComponent } from './settle-cash.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('SettleCashComponent', () => {
   let component: SettleCashComponent;
@@ -8,6 +9,7 @@ describe('SettleCashComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [SettleCashComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('SettleCashComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(SettleCashComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CreateRangeComponent } from './create-range.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('CreateRangeComponent', () => {
   let component: CreateRangeComponent;
@@ -8,6 +9,7 @@ describe('CreateRangeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [CreateRangeComponent]
     }).compileComponents();
   });
@@ -15,7 +17,6 @@ describe('CreateRangeComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CreateRangeComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

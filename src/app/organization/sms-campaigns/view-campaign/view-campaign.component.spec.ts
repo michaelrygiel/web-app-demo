@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ViewCampaignComponent } from './view-campaign.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('ViewCampaignComponent', () => {
   let component: ViewCampaignComponent;
@@ -8,6 +9,7 @@ describe('ViewCampaignComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ViewCampaignComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('ViewCampaignComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ViewCampaignComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

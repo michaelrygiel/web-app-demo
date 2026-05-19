@@ -1,3 +1,5 @@
+import { getTestConfigModule } from '../../testing/test-config';
+
 // import { Logger, LogLevel, LogOutput } from './logger.service';
 
 // const logMethods = ['log', 'info', 'warn', 'error'];

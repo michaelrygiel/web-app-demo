@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FileUploadComponent } from './file-upload.component';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('FileUploadComponent', () => {
   let component: FileUploadComponent;
@@ -8,6 +9,7 @@ describe('FileUploadComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [FileUploadComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('FileUploadComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(FileUploadComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

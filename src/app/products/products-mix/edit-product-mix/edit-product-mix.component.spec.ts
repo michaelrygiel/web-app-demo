@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EditProductMixComponent } from './edit-product-mix.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('EditProductMixComponent', () => {
   let component: EditProductMixComponent;
@@ -8,6 +9,7 @@ describe('EditProductMixComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [EditProductMixComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('EditProductMixComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(EditProductMixComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

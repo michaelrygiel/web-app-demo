@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FrequentPostingsComponent } from './frequent-postings.component';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('FrequentPostingsComponent', () => {
   let component: FrequentPostingsComponent;
@@ -8,6 +9,7 @@ describe('FrequentPostingsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [FrequentPostingsComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('FrequentPostingsComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(FrequentPostingsComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SettingsComponent } from './settings.component';
+import { getTestConfigModule } from '../testing/test-config';
 
 describe('SettingsComponent', () => {
   let component: SettingsComponent;
@@ -8,6 +9,7 @@ describe('SettingsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [SettingsComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('SettingsComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(SettingsComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

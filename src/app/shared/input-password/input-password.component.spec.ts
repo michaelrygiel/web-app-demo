@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { InputPasswordComponent } from './input-password.component';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('InputPasswordComponent', () => {
   let component: InputPasswordComponent;
@@ -8,12 +9,12 @@ describe('InputPasswordComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [InputPasswordComponent]
     }).compileComponents();
 
     fixture = TestBed.createComponent(InputPasswordComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

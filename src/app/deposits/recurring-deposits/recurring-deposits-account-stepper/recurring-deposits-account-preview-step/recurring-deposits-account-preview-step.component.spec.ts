@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RecurringDepositsAccountPreviewStepComponent } from './recurring-deposits-account-preview-step.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('RecurringDepositsAccountPreviewStepComponent', () => {
   let component: RecurringDepositsAccountPreviewStepComponent;
@@ -8,6 +9,7 @@ describe('RecurringDepositsAccountPreviewStepComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [RecurringDepositsAccountPreviewStepComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('RecurringDepositsAccountPreviewStepComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(RecurringDepositsAccountPreviewStepComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

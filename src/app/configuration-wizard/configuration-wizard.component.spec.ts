@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ConfigurationWizardComponent } from './configuration-wizard.component';
+import { getTestConfigModule } from '../testing/test-config';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 describe('ConfigurationWizardComponent', () => {
   let component: ConfigurationWizardComponent;
@@ -8,14 +10,18 @@ describe('ConfigurationWizardComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ConfigurationWizardComponent]
+      ...getTestConfigModule(),
+      declarations: [ConfigurationWizardComponent],
+      providers: [
+        ...(getTestConfigModule().providers || []),
+        { provide: MatDialogRef, useValue: { updateSize: () => {}, close: () => {} } },
+        { provide: MAT_DIALOG_DATA, useValue: {} }]
     }).compileComponents();
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(ConfigurationWizardComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

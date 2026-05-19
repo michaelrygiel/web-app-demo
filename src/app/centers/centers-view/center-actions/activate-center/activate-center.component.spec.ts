@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ActivateCenterComponent } from './activate-center.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('ActivateCenterComponent', () => {
   let component: ActivateCenterComponent;
@@ -8,6 +9,7 @@ describe('ActivateCenterComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ActivateCenterComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('ActivateCenterComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ActivateCenterComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

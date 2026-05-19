@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ChartComponent } from './chart.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('ChartComponent', () => {
   let component: ChartComponent;
@@ -8,6 +9,7 @@ describe('ChartComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ChartComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('ChartComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ChartComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

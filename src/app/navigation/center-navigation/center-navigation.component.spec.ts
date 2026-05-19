@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CenterNavigationComponent } from './center-navigation.component';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('CenterNavigationComponent', () => {
   let component: CenterNavigationComponent;
@@ -8,6 +9,7 @@ describe('CenterNavigationComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [CenterNavigationComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('CenterNavigationComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CenterNavigationComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

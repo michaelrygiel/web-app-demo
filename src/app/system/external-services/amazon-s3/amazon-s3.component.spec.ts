@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AmazonS3Component } from './amazon-s3.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('AmazonS3Component', () => {
   let component: AmazonS3Component;
@@ -8,6 +9,7 @@ describe('AmazonS3Component', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [AmazonS3Component]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('AmazonS3Component', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(AmazonS3Component);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

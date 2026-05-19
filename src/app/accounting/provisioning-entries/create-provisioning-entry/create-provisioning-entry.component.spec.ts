@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CreateProvisioningEntryComponent } from './create-provisioning-entry.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('CreateProvisioningEntryComponent', () => {
   let component: CreateProvisioningEntryComponent;
@@ -8,6 +9,7 @@ describe('CreateProvisioningEntryComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [CreateProvisioningEntryComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('CreateProvisioningEntryComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CreateProvisioningEntryComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

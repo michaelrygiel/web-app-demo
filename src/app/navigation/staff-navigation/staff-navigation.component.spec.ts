@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { StaffNavigationComponent } from './staff-navigation.component';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('StaffNavigationComponent', () => {
   let component: StaffNavigationComponent;
@@ -8,6 +9,7 @@ describe('StaffNavigationComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [StaffNavigationComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('StaffNavigationComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(StaffNavigationComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

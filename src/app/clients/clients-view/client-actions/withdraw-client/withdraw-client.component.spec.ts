@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WithdrawClientComponent } from './withdraw-client.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('WithdrawClientComponent', () => {
   let component: WithdrawClientComponent;
@@ -8,6 +9,7 @@ describe('WithdrawClientComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [WithdrawClientComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('WithdrawClientComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(WithdrawClientComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

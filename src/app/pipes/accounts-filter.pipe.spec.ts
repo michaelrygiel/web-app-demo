@@ -1,4 +1,5 @@
 import { AccountsFilterPipe } from './accounts-filter.pipe';
+import { getTestConfigModule } from '../testing/test-config';
 
 describe('AccountsFilterPipe', () => {
   it('create an instance', () => {

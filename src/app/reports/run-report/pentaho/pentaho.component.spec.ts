@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PentahoComponent } from './pentaho.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('PentahoComponent', () => {
   let component: PentahoComponent;
@@ -8,6 +9,7 @@ describe('PentahoComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [PentahoComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('PentahoComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(PentahoComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

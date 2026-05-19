@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CheckerInboxComponent } from './checker-inbox.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('CheckerInboxComponent', () => {
   let component: CheckerInboxComponent;
@@ -8,6 +9,7 @@ describe('CheckerInboxComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [CheckerInboxComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('CheckerInboxComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CheckerInboxComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

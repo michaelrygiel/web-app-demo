@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ShellComponent } from './shell.component';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('ShellComponent', () => {
   let component: ShellComponent;
@@ -8,6 +9,7 @@ describe('ShellComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ShellComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('ShellComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ShellComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

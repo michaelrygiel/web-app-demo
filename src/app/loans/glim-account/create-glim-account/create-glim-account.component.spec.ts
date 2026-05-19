@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CreateGlimAccountComponent } from './create-glim-account.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('CreateGlimAccountComponent', () => {
   let component: CreateGlimAccountComponent;
@@ -8,6 +9,7 @@ describe('CreateGlimAccountComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [CreateGlimAccountComponent]
     }).compileComponents();
   });
@@ -15,7 +17,6 @@ describe('CreateGlimAccountComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CreateGlimAccountComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {
