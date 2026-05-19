@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ConfigureMakerCheckerTasksComponent } from './configure-maker-checker-tasks.component';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('ConfigureMakerCheckerTasksComponent', () => {
   let component: ConfigureMakerCheckerTasksComponent;
@@ -8,6 +9,7 @@ describe('ConfigureMakerCheckerTasksComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ConfigureMakerCheckerTasksComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('ConfigureMakerCheckerTasksComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ConfigureMakerCheckerTasksComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

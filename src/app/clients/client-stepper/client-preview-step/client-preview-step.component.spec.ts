@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ClientPreviewStepComponent } from './client-preview-step.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('ClientPreviewStepComponent', () => {
   let component: ClientPreviewStepComponent;
@@ -8,6 +9,7 @@ describe('ClientPreviewStepComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ClientPreviewStepComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('ClientPreviewStepComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ClientPreviewStepComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

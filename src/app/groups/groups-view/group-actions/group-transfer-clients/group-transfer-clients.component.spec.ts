@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { GroupTransferClientsComponent } from './group-transfer-clients.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('GroupTransferClientsComponent', () => {
   let component: GroupTransferClientsComponent;
@@ -8,6 +9,7 @@ describe('GroupTransferClientsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [GroupTransferClientsComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('GroupTransferClientsComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(GroupTransferClientsComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ReleaseAmountDialogComponent } from './release-amount-dialog.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
+import { MatDialogRef } from '@angular/material/dialog';
 
 describe('ReleaseAmountDialogComponent', () => {
   let component: ReleaseAmountDialogComponent;
@@ -8,14 +10,17 @@ describe('ReleaseAmountDialogComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ReleaseAmountDialogComponent]
+      ...getTestConfigModule(),
+      declarations: [ReleaseAmountDialogComponent],
+      providers: [
+        ...(getTestConfigModule().providers || []),
+        { provide: MatDialogRef, useValue: { updateSize: () => {}, close: () => {} } }]
     }).compileComponents();
   });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(ReleaseAmountDialogComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

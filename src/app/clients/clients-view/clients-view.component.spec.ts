@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ClientsViewComponent } from './clients-view.component';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('ClientsViewComponent', () => {
   let component: ClientsViewComponent;
@@ -8,6 +9,7 @@ describe('ClientsViewComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ClientsViewComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('ClientsViewComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ClientsViewComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

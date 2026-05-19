@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { InterestRateChartTabComponent } from './interest-rate-chart-tab.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('InterestRateChartTabComponent', () => {
   let component: InterestRateChartTabComponent;
@@ -8,6 +9,7 @@ describe('InterestRateChartTabComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [InterestRateChartTabComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('InterestRateChartTabComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(InterestRateChartTabComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

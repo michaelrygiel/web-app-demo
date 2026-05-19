@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AttachCenterMeetingComponent } from './attach-center-meeting.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('AttachCenterMeetingComponent', () => {
   let component: AttachCenterMeetingComponent;
@@ -8,6 +9,7 @@ describe('AttachCenterMeetingComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [AttachCenterMeetingComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('AttachCenterMeetingComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(AttachCenterMeetingComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

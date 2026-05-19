@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DelinquencyRangeComponent } from './delinquency-range.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('DelinquencyRangeComponent', () => {
   let component: DelinquencyRangeComponent;
@@ -8,6 +9,7 @@ describe('DelinquencyRangeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [DelinquencyRangeComponent]
     }).compileComponents();
   });
@@ -15,7 +17,6 @@ describe('DelinquencyRangeComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(DelinquencyRangeComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

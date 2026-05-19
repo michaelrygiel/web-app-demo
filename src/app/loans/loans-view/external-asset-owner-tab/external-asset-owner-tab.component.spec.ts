@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ExternalAssetOwnerTabComponent } from './external-asset-owner-tab.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('ExternalAssetOwnerTabComponent', () => {
   let component: ExternalAssetOwnerTabComponent;
@@ -8,6 +9,7 @@ describe('ExternalAssetOwnerTabComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ExternalAssetOwnerTabComponent]
     }).compileComponents();
   });
@@ -15,7 +17,6 @@ describe('ExternalAssetOwnerTabComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ExternalAssetOwnerTabComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

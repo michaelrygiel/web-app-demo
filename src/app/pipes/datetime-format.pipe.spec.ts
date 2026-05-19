@@ -1,4 +1,5 @@
 import { DatetimeFormatPipe } from './datetime-format.pipe';
+import { getTestConfigModule } from '../testing/test-config';
 
 describe('DatetimeFormatPipe', () => {
   it('create an instance', () => {

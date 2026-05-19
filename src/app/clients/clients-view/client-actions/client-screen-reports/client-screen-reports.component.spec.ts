@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ClientScreenReportsComponent } from './client-screen-reports.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('ClientScreenReportsComponent', () => {
   let component: ClientScreenReportsComponent;
@@ -8,6 +9,7 @@ describe('ClientScreenReportsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ClientScreenReportsComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('ClientScreenReportsComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ClientScreenReportsComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

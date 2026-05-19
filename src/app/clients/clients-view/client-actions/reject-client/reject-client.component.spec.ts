@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RejectClientComponent } from './reject-client.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('RejectClientComponent', () => {
   let component: RejectClientComponent;
@@ -8,6 +9,7 @@ describe('RejectClientComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [RejectClientComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('RejectClientComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(RejectClientComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

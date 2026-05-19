@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EditAccountNumberPreferenceComponent } from './edit-account-number-preference.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('EditAccountNumberPreferenceComponent', () => {
   let component: EditAccountNumberPreferenceComponent;
@@ -8,6 +9,7 @@ describe('EditAccountNumberPreferenceComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [EditAccountNumberPreferenceComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('EditAccountNumberPreferenceComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(EditAccountNumberPreferenceComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

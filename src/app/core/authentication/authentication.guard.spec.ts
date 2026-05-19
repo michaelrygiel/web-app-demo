@@ -1,3 +1,5 @@
+import { getTestConfigModule } from '../../testing/test-config';
+
 // import { TestBed, inject } from '@angular/core/testing';
 // import { Router } from '@angular/router';
 
@@ -14,13 +16,7 @@
 //     mockRouter = {
 //       navigate: jasmine.createSpy('navigate')
 //     };
-//     TestBed.configureTestingModule({
-//       providers: [
-//         AuthenticationGuard,
-//         { provide: AuthenticationService, useClass: MockAuthenticationService },
-//         { provide: Router, useValue: mockRouter },
-//       ]
-//     });
+//     TestBed.configureTestingModule(getTestConfigModule());
 //   });
 
 //   beforeEach(inject([

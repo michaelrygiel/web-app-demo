@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ViewAccountTransferComponent } from './view-account-transfer.component';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('ViewAccountTransferComponent', () => {
   let component: ViewAccountTransferComponent;
@@ -8,6 +9,7 @@ describe('ViewAccountTransferComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ViewAccountTransferComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('ViewAccountTransferComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ViewAccountTransferComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ListTransactionsComponent } from './list-transactions.component';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('ListTransactionsComponent', () => {
   let component: ListTransactionsComponent;
@@ -8,6 +9,7 @@ describe('ListTransactionsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ListTransactionsComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('ListTransactionsComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ListTransactionsComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

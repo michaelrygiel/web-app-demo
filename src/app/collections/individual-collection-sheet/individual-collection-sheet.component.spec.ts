@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { IndividualCollectionSheetComponent } from './individual-collection-sheet.component';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('IndividualCollectionSheetComponent', () => {
   let component: IndividualCollectionSheetComponent;
@@ -8,6 +9,7 @@ describe('IndividualCollectionSheetComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [IndividualCollectionSheetComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('IndividualCollectionSheetComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(IndividualCollectionSheetComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

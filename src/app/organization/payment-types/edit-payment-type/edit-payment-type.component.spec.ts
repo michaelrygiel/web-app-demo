@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EditPaymentTypeComponent } from './edit-payment-type.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('EditPaymentTypeComponent', () => {
   let component: EditPaymentTypeComponent;
@@ -8,6 +9,7 @@ describe('EditPaymentTypeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [EditPaymentTypeComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('EditPaymentTypeComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(EditPaymentTypeComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

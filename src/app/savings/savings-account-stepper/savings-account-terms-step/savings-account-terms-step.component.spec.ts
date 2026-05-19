@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SavingsAccountTermsStepComponent } from './savings-account-terms-step.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('SavingsAccountTermsStepComponent', () => {
   let component: SavingsAccountTermsStepComponent;
@@ -8,6 +9,7 @@ describe('SavingsAccountTermsStepComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [SavingsAccountTermsStepComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('SavingsAccountTermsStepComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(SavingsAccountTermsStepComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

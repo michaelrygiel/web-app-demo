@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SavingProductCurrencyStepComponent } from './saving-product-currency-step.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('SavingProductCurrencyStepComponent', () => {
   let component: SavingProductCurrencyStepComponent;
@@ -8,6 +9,7 @@ describe('SavingProductCurrencyStepComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [SavingProductCurrencyStepComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('SavingProductCurrencyStepComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(SavingProductCurrencyStepComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

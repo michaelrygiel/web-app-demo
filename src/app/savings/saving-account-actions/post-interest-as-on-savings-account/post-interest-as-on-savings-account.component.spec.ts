@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PostInterestAsOnSavingsAccountComponent } from './post-interest-as-on-savings-account.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('PostInterestAsOnSavingsAccountComponent', () => {
   let component: PostInterestAsOnSavingsAccountComponent;
@@ -8,6 +9,7 @@ describe('PostInterestAsOnSavingsAccountComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [PostInterestAsOnSavingsAccountComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('PostInterestAsOnSavingsAccountComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(PostInterestAsOnSavingsAccountComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

@@ -1,3 +1,5 @@
+import { getTestConfigModule } from '../../testing/test-config';
+
 // import { HasPermissionDirective } from './has-permission.directive';
 
 // describe('HasPermissionDirective', () => {

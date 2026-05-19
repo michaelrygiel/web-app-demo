@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CalculateInterestDialogComponent } from './calculate-interest-dialog.component';
+import { getTestConfigModule } from '../../../../../testing/test-config';
+import { MatDialogRef } from '@angular/material/dialog';
 
 describe('CalculateInterestDialogComponent', () => {
   let component: CalculateInterestDialogComponent;
@@ -8,14 +10,17 @@ describe('CalculateInterestDialogComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [CalculateInterestDialogComponent]
+      ...getTestConfigModule(),
+      declarations: [CalculateInterestDialogComponent],
+      providers: [
+        ...(getTestConfigModule().providers || []),
+        { provide: MatDialogRef, useValue: { updateSize: () => {}, close: () => {} } }]
     }).compileComponents();
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(CalculateInterestDialogComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

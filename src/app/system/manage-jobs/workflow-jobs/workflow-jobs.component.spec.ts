@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WorkflowJobsComponent } from './workflow-jobs.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('WorkflowJobsComponent', () => {
   let component: WorkflowJobsComponent;
@@ -8,6 +9,7 @@ describe('WorkflowJobsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [WorkflowJobsComponent]
     }).compileComponents();
   });
@@ -15,7 +17,6 @@ describe('WorkflowJobsComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(WorkflowJobsComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

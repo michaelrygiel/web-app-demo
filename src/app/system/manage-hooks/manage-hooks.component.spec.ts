@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ManageHooksComponent } from './manage-hooks.component';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('ManageHooksComponent', () => {
   let component: ManageHooksComponent;
@@ -8,6 +9,7 @@ describe('ManageHooksComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ManageHooksComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('ManageHooksComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ManageHooksComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

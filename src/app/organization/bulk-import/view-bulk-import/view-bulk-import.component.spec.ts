@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ViewBulkImportComponent } from './view-bulk-import.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('ViewBulkImportComponent', () => {
   let component: ViewBulkImportComponent;
@@ -8,6 +9,7 @@ describe('ViewBulkImportComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ViewBulkImportComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('ViewBulkImportComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ViewBulkImportComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

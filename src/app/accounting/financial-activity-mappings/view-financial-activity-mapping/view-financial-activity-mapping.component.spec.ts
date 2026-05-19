@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ViewFinancialActivityMappingComponent } from './view-financial-activity-mapping.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('ViewFinancialActivityMappingComponent', () => {
   let component: ViewFinancialActivityMappingComponent;
@@ -8,6 +9,7 @@ describe('ViewFinancialActivityMappingComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ViewFinancialActivityMappingComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('ViewFinancialActivityMappingComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ViewFinancialActivityMappingComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

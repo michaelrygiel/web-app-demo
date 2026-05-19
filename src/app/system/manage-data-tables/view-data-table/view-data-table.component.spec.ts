@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ViewDataTableComponent } from './view-data-table.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('ViewDataTableComponent', () => {
   let component: ViewDataTableComponent;
@@ -8,6 +9,7 @@ describe('ViewDataTableComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ViewDataTableComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('ViewDataTableComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ViewDataTableComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

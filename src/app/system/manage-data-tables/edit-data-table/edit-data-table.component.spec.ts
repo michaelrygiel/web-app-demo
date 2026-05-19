@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EditDataTableComponent } from './edit-data-table.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('EditDataTableComponent', () => {
   let component: EditDataTableComponent;
@@ -8,6 +9,7 @@ describe('EditDataTableComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [EditDataTableComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('EditDataTableComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(EditDataTableComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AddFamilyMemberComponent } from './add-family-member.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('AddFamilyMemberComponent', () => {
   let component: AddFamilyMemberComponent;
@@ -8,6 +9,7 @@ describe('AddFamilyMemberComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [AddFamilyMemberComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('AddFamilyMemberComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(AddFamilyMemberComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

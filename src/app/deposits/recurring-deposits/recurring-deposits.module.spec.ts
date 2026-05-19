@@ -1,4 +1,5 @@
 import { RecurringDepositsModule } from './recurring-deposits.module';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('RecurringDepositsModule', () => {
   let recurringDepositsModule: RecurringDepositsModule;

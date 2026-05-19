@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RecurringDepositProductTermsStepComponent } from './recurring-deposit-product-terms-step.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('RecurringDepositProductTermsStepComponent', () => {
   let component: RecurringDepositProductTermsStepComponent;
@@ -8,6 +9,7 @@ describe('RecurringDepositProductTermsStepComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [RecurringDepositProductTermsStepComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('RecurringDepositProductTermsStepComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(RecurringDepositProductTermsStepComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AllocateCashComponent } from './allocate-cash.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('AllocateCashComponent', () => {
   let component: AllocateCashComponent;
@@ -8,6 +9,7 @@ describe('AllocateCashComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [AllocateCashComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('AllocateCashComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(AllocateCashComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

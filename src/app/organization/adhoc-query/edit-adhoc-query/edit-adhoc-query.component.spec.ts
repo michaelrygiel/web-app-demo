@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EditAdhocQueryComponent } from './edit-adhoc-query.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('EditAdhocQueryComponent', () => {
   let component: EditAdhocQueryComponent;
@@ -8,6 +9,7 @@ describe('EditAdhocQueryComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [EditAdhocQueryComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('EditAdhocQueryComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(EditAdhocQueryComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { OfficeNavigationComponent } from './office-navigation.component';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('OfficeNavigationComponent', () => {
   let component: OfficeNavigationComponent;
@@ -8,6 +9,7 @@ describe('OfficeNavigationComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [OfficeNavigationComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('OfficeNavigationComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(OfficeNavigationComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

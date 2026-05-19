@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ViewRangeComponent } from './view-range.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('ViewRangeComponent', () => {
   let component: ViewRangeComponent;
@@ -8,6 +9,7 @@ describe('ViewRangeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ViewRangeComponent]
     }).compileComponents();
   });
@@ -15,7 +17,6 @@ describe('ViewRangeComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ViewRangeComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

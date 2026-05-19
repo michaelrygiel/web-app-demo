@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AccountingRulesComponent } from './accounting-rules.component';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('AccountingRulesComponent', () => {
   let component: AccountingRulesComponent;
@@ -8,6 +9,7 @@ describe('AccountingRulesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [AccountingRulesComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('AccountingRulesComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(AccountingRulesComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

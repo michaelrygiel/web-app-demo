@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ClientTrendsBarComponent } from './client-trends-bar.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('ClientTrendsBarComponent', () => {
   let component: ClientTrendsBarComponent;
@@ -8,6 +9,7 @@ describe('ClientTrendsBarComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ClientTrendsBarComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('ClientTrendsBarComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ClientTrendsBarComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

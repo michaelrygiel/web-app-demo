@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ViewJournalEntryTransactionComponent } from './view-journal-entry-transaction.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('ViewJournalEntryTransactionComponent', () => {
   let component: ViewJournalEntryTransactionComponent;
@@ -8,6 +9,7 @@ describe('ViewJournalEntryTransactionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ViewJournalEntryTransactionComponent]
     }).compileComponents();
   });
@@ -15,7 +17,6 @@ describe('ViewJournalEntryTransactionComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ViewJournalEntryTransactionComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

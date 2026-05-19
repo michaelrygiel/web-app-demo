@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CreateFloatingRateComponent } from './create-floating-rate.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('CreateFloatingRateComponent', () => {
   let component: CreateFloatingRateComponent;
@@ -8,6 +9,7 @@ describe('CreateFloatingRateComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [CreateFloatingRateComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('CreateFloatingRateComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CreateFloatingRateComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

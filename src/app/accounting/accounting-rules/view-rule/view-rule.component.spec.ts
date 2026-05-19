@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ViewRuleComponent } from './view-rule.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('ViewRuleComponent', () => {
   let component: ViewRuleComponent;
@@ -8,6 +9,7 @@ describe('ViewRuleComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ViewRuleComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('ViewRuleComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ViewRuleComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AuditTrailsComponent } from './audit-trails.component';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('AuditTrailsComponent', () => {
   let component: AuditTrailsComponent;
@@ -8,6 +9,7 @@ describe('AuditTrailsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [AuditTrailsComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('AuditTrailsComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(AuditTrailsComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

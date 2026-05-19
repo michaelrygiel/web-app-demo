@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CreateSavingProductComponent } from './create-saving-product.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('CreateSavingProductComponent', () => {
   let component: CreateSavingProductComponent;
@@ -8,6 +9,7 @@ describe('CreateSavingProductComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [CreateSavingProductComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('CreateSavingProductComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CreateSavingProductComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

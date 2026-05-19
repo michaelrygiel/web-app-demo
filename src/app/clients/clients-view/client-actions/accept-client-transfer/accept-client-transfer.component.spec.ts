@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AcceptClientTransferComponent } from './accept-client-transfer.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('AcceptClientTransferComponent', () => {
   let component: AcceptClientTransferComponent;
@@ -8,6 +9,7 @@ describe('AcceptClientTransferComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [AcceptClientTransferComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('AcceptClientTransferComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(AcceptClientTransferComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

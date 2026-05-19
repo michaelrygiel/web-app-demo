@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CreateFixedDepositAccountComponent } from './create-fixed-deposit-account.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('CreateFixedDepositAccountComponent', () => {
   let component: CreateFixedDepositAccountComponent;
@@ -8,6 +9,7 @@ describe('CreateFixedDepositAccountComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [CreateFixedDepositAccountComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('CreateFixedDepositAccountComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CreateFixedDepositAccountComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

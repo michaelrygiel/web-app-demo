@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ViewProvisioningJournalEntriesComponent } from './view-provisioning-journal-entries.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('ViewProvisioningJournalEntriesComponent', () => {
   let component: ViewProvisioningJournalEntriesComponent;
@@ -8,6 +9,7 @@ describe('ViewProvisioningJournalEntriesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ViewProvisioningJournalEntriesComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('ViewProvisioningJournalEntriesComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ViewProvisioningJournalEntriesComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

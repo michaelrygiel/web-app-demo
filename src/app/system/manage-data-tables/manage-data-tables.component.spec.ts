@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ManageDataTablesComponent } from './manage-data-tables.component';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('ManageDataTablesComponent', () => {
   let component: ManageDataTablesComponent;
@@ -8,6 +9,7 @@ describe('ManageDataTablesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ManageDataTablesComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('ManageDataTablesComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ManageDataTablesComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

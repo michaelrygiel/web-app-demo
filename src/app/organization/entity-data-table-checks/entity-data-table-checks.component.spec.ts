@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EntityDataTableChecksComponent } from './entity-data-table-checks.component';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('EntityDataTableChecksComponent', () => {
   let component: EntityDataTableChecksComponent;
@@ -8,6 +9,7 @@ describe('EntityDataTableChecksComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [EntityDataTableChecksComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('EntityDataTableChecksComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(EntityDataTableChecksComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

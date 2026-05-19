@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { StandingInstructionsTabComponent } from './standing-instructions-tab.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('StandingInstructionsTabComponent', () => {
   let component: StandingInstructionsTabComponent;
@@ -8,6 +9,7 @@ describe('StandingInstructionsTabComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [StandingInstructionsTabComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('StandingInstructionsTabComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(StandingInstructionsTabComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

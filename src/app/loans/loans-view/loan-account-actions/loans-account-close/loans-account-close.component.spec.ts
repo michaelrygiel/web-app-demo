@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LoansAccountCloseComponent } from './loans-account-close.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('LoansAccountCloseComponent', () => {
   let component: LoansAccountCloseComponent;
@@ -8,6 +9,7 @@ describe('LoansAccountCloseComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [LoansAccountCloseComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('LoansAccountCloseComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(LoansAccountCloseComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

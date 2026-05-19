@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LoansAccountDatatableStepComponent } from './loans-account-datatable-step.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('LoansAccountDatatableStepComponent', () => {
   let component: LoansAccountDatatableStepComponent;
@@ -8,6 +9,7 @@ describe('LoansAccountDatatableStepComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [LoansAccountDatatableStepComponent]
     }).compileComponents();
   });
@@ -15,7 +17,6 @@ describe('LoansAccountDatatableStepComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(LoansAccountDatatableStepComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

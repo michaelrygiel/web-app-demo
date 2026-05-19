@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LoanProductCapitalizedIncomeStepComponent } from './loan-product-capitalsed-income-step.component';
+import { LoanProductCapitalizedIncomeStepComponent } from './loan-product-capitalized-income-step.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('LoanProductCapitalizedIncomeStepComponent', () => {
   let component: LoanProductCapitalizedIncomeStepComponent;
@@ -8,12 +9,12 @@ describe('LoanProductCapitalizedIncomeStepComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [LoanProductCapitalizedIncomeStepComponent]
     }).compileComponents();
 
     fixture = TestBed.createComponent(LoanProductCapitalizedIncomeStepComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

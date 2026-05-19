@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CommitteeTabComponent } from './committee-tab.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('CommitteeTabComponent', () => {
   let component: CommitteeTabComponent;
@@ -8,6 +9,7 @@ describe('CommitteeTabComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [CommitteeTabComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('CommitteeTabComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CommitteeTabComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

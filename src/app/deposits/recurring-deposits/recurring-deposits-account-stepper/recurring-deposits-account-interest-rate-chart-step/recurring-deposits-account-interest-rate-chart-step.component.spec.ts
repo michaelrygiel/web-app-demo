@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RecurringDepositsAccountInterestRateChartStepComponent } from './recurring-deposits-account-interest-rate-chart-step.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('RecurringDepositsAccountInterestRateChartStepComponent', () => {
   let component: RecurringDepositsAccountInterestRateChartStepComponent;
@@ -8,6 +9,7 @@ describe('RecurringDepositsAccountInterestRateChartStepComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [RecurringDepositsAccountInterestRateChartStepComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('RecurringDepositsAccountInterestRateChartStepComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(RecurringDepositsAccountInterestRateChartStepComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

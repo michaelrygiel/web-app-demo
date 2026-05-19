@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ViewSchedulerJobComponent } from './view-scheduler-job.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('ViewSchedulerJobComponent', () => {
   let component: ViewSchedulerJobComponent;
@@ -8,6 +9,7 @@ describe('ViewSchedulerJobComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ViewSchedulerJobComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('ViewSchedulerJobComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ViewSchedulerJobComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LoanProductSummaryComponent } from './loan-product-summary.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('LoanProductSummaryComponent', () => {
   let component: LoanProductSummaryComponent;
@@ -8,12 +9,12 @@ describe('LoanProductSummaryComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [LoanProductSummaryComponent]
     }).compileComponents();
 
     fixture = TestBed.createComponent(LoanProductSummaryComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FloatingInterestRatesComponent } from './floating-interest-rates.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('FloatingInterestRatesComponent', () => {
   let component: FloatingInterestRatesComponent;
@@ -8,6 +9,7 @@ describe('FloatingInterestRatesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [FloatingInterestRatesComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('FloatingInterestRatesComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(FloatingInterestRatesComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

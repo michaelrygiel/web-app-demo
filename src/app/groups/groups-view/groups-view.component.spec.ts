@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { GroupsViewComponent } from './groups-view.component';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('GroupsViewComponent', () => {
   let component: GroupsViewComponent;
@@ -8,6 +9,7 @@ describe('GroupsViewComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [GroupsViewComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('GroupsViewComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(GroupsViewComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

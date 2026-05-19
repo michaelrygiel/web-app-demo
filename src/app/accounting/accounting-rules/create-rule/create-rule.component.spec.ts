@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CreateRuleComponent } from './create-rule.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('CreateRuleComponent', () => {
   let component: CreateRuleComponent;
@@ -8,6 +9,7 @@ describe('CreateRuleComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [CreateRuleComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('CreateRuleComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CreateRuleComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

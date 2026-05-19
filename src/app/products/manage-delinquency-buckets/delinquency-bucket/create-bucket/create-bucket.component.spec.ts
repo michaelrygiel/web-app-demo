@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CreateBucketComponent } from './create-bucket.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('CreateBucketComponent', () => {
   let component: CreateBucketComponent;
@@ -8,6 +9,7 @@ describe('CreateBucketComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [CreateBucketComponent]
     }).compileComponents();
   });
@@ -15,7 +17,6 @@ describe('CreateBucketComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CreateBucketComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

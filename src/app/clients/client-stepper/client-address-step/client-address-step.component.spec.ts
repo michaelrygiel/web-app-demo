@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ClientAddressStepComponent } from './client-address-step.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('ClientAddressStepComponent', () => {
   let component: ClientAddressStepComponent;
@@ -8,6 +9,7 @@ describe('ClientAddressStepComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ClientAddressStepComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('ClientAddressStepComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ClientAddressStepComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ShareProductAccountingStepComponent } from './share-product-accounting-step.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('ShareProductAccountingStepComponent', () => {
   let component: ShareProductAccountingStepComponent;
@@ -8,6 +9,7 @@ describe('ShareProductAccountingStepComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ShareProductAccountingStepComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('ShareProductAccountingStepComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ShareProductAccountingStepComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

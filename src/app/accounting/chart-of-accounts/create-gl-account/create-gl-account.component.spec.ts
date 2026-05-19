@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CreateGlAccountComponent } from './create-gl-account.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('CreateGlAccountComponent', () => {
   let component: CreateGlAccountComponent;
@@ -8,6 +9,7 @@ describe('CreateGlAccountComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [CreateGlAccountComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('CreateGlAccountComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CreateGlAccountComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AddressTabComponent } from './address-tab.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('AddressTabComponent', () => {
   let component: AddressTabComponent;
@@ -8,6 +9,7 @@ describe('AddressTabComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [AddressTabComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('AddressTabComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(AddressTabComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

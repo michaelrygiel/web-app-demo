@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MigrateOpeningBalancesComponent } from './migrate-opening-balances.component';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('MigrateOpeningBalancesComponent', () => {
   let component: MigrateOpeningBalancesComponent;
@@ -8,6 +9,7 @@ describe('MigrateOpeningBalancesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [MigrateOpeningBalancesComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('MigrateOpeningBalancesComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(MigrateOpeningBalancesComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CenterActionsComponent } from './center-actions.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('CenterActionsComponent', () => {
   let component: CenterActionsComponent;
@@ -8,6 +9,7 @@ describe('CenterActionsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [CenterActionsComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('CenterActionsComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CenterActionsComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

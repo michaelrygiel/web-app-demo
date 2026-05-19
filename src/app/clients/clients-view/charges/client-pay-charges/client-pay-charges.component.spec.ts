@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ClientPayChargesComponent } from './client-pay-charges.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('ClientPayChargesComponent', () => {
   let component: ClientPayChargesComponent;
@@ -8,6 +9,7 @@ describe('ClientPayChargesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ClientPayChargesComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('ClientPayChargesComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ClientPayChargesComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

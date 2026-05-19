@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ViewDividendComponent } from './view-dividend.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('ViewDividendComponent', () => {
   let component: ViewDividendComponent;
@@ -8,6 +9,7 @@ describe('ViewDividendComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ViewDividendComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('ViewDividendComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ViewDividendComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

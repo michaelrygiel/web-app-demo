@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RecurringDepositGeneralTabComponent } from './recurring-deposit-general-tab.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('RecurringDepositGeneralTabComponent', () => {
   let component: RecurringDepositGeneralTabComponent;
@@ -8,6 +9,7 @@ describe('RecurringDepositGeneralTabComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [RecurringDepositGeneralTabComponent]
     }).compileComponents();
   });
@@ -15,7 +17,6 @@ describe('RecurringDepositGeneralTabComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(RecurringDepositGeneralTabComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

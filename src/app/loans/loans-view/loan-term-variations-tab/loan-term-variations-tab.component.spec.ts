@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LoanTermVariationsTabComponent } from './loan-term-variations-tab.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('LoanTermVariationsTabComponent', () => {
   let component: LoanTermVariationsTabComponent;
@@ -8,12 +9,12 @@ describe('LoanTermVariationsTabComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [LoanTermVariationsTabComponent]
     }).compileComponents();
 
     fixture = TestBed.createComponent(LoanTermVariationsTabComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

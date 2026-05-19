@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SavingsDocumentsTabComponent } from './savings-documents-tab.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('SavingsDocumentsTabComponent', () => {
   let component: SavingsDocumentsTabComponent;
@@ -8,6 +9,7 @@ describe('SavingsDocumentsTabComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [SavingsDocumentsTabComponent]
     }).compileComponents();
   });
@@ -15,7 +17,6 @@ describe('SavingsDocumentsTabComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(SavingsDocumentsTabComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

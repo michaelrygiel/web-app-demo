@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CreateAccountNumberPreferenceComponent } from './create-account-number-preference.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('CreateAccountNumberPreferenceComponent', () => {
   let component: CreateAccountNumberPreferenceComponent;
@@ -8,6 +9,7 @@ describe('CreateAccountNumberPreferenceComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [CreateAccountNumberPreferenceComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('CreateAccountNumberPreferenceComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CreateAccountNumberPreferenceComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

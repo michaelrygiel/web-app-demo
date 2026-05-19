@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CobWorkflowComponent } from './cob-workflow.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('CobWorkflowComponent', () => {
   let component: CobWorkflowComponent;
@@ -8,6 +9,7 @@ describe('CobWorkflowComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [CobWorkflowComponent]
     }).compileComponents();
   });
@@ -15,7 +17,6 @@ describe('CobWorkflowComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CobWorkflowComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

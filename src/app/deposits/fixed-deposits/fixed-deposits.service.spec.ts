@@ -1,9 +1,10 @@
 import { TestBed } from '@angular/core/testing';
 
 import { FixedDepositsService } from './fixed-deposits.service';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('FixedDepositsService', () => {
-  beforeEach(() => TestBed.configureTestingModule({}));
+  beforeEach(() => TestBed.configureTestingModule(getTestConfigModule()));
 
   it('should be created', () => {
     const service: FixedDepositsService = TestBed.inject(FixedDepositsService);

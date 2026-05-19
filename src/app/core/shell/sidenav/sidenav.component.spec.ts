@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SidenavComponent } from './sidenav.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('SidenavComponent', () => {
   let component: SidenavComponent;
@@ -8,6 +9,7 @@ describe('SidenavComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [SidenavComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('SidenavComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(SidenavComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

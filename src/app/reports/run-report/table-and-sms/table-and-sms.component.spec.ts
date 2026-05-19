@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TableAndSmsComponent } from './table-and-sms.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('TableAndSmsComponent', () => {
   let component: TableAndSmsComponent;
@@ -8,6 +9,7 @@ describe('TableAndSmsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [TableAndSmsComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('TableAndSmsComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(TableAndSmsComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

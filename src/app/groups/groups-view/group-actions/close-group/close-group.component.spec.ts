@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CloseGroupComponent } from './close-group.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('CloseGroupComponent', () => {
   let component: CloseGroupComponent;
@@ -8,6 +9,7 @@ describe('CloseGroupComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [CloseGroupComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('CloseGroupComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CloseGroupComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

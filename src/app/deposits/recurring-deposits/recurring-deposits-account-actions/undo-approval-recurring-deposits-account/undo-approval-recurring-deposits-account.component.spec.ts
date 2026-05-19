@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UndoApprovalRecurringDepositsAccountComponent } from './undo-approval-recurring-deposits-account.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('UndoApprovalRecurringDepositsAccountComponent', () => {
   let component: UndoApprovalRecurringDepositsAccountComponent;
@@ -8,6 +9,7 @@ describe('UndoApprovalRecurringDepositsAccountComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [UndoApprovalRecurringDepositsAccountComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('UndoApprovalRecurringDepositsAccountComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(UndoApprovalRecurringDepositsAccountComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

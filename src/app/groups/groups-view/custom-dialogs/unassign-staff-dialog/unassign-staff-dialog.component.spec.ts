@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UnassignStaffDialogComponent } from './unassign-staff-dialog.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 describe('UnassignStaffDialogComponent', () => {
   let component: UnassignStaffDialogComponent;
@@ -8,14 +10,18 @@ describe('UnassignStaffDialogComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [UnassignStaffDialogComponent]
+      ...getTestConfigModule(),
+      declarations: [UnassignStaffDialogComponent],
+      providers: [
+        ...(getTestConfigModule().providers || []),
+        { provide: MatDialogRef, useValue: { updateSize: () => {}, close: () => {} } },
+        { provide: MAT_DIALOG_DATA, useValue: {} }]
     }).compileComponents();
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(UnassignStaffDialogComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

@@ -1,3 +1,5 @@
+import { getTestConfigModule } from '../../testing/test-config';
+
 // import { TestBed, inject } from '@angular/core/testing';
 // import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 // import { HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
@@ -15,14 +17,7 @@
 //   }
 
 //   beforeEach(() => {
-//     TestBed.configureTestingModule({
-//       imports: [HttpClientTestingModule],
-//       providers: [{
-//         provide: HTTP_INTERCEPTORS,
-//         useFactory: createInterceptor,
-//         multi: true
-//       }]
-//     });
+//     TestBed.configureTestingModule(getTestConfigModule());
 //   });
 
 //   beforeEach(inject([

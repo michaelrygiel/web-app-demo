@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ViewStandingInstructionsComponent } from './view-standing-instructions.component';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('ViewStandingInstructionsComponent', () => {
   let component: ViewStandingInstructionsComponent;
@@ -8,6 +9,7 @@ describe('ViewStandingInstructionsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ViewStandingInstructionsComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('ViewStandingInstructionsComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ViewStandingInstructionsComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

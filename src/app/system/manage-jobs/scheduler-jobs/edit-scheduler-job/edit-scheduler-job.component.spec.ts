@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EditSchedulerJobComponent } from './edit-scheduler-job.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('EditSchedulerJobComponent', () => {
   let component: EditSchedulerJobComponent;
@@ -8,6 +9,7 @@ describe('EditSchedulerJobComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [EditSchedulerJobComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('EditSchedulerJobComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(EditSchedulerJobComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

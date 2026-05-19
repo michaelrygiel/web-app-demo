@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RejectSharesComponent } from './reject-shares.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('RejectSharesComponent', () => {
   let component: RejectSharesComponent;
@@ -8,6 +9,7 @@ describe('RejectSharesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [RejectSharesComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('RejectSharesComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(RejectSharesComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

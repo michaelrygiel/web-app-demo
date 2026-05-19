@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { InactivateChargeDialogComponent } from './inactivate-charge-dialog.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 describe('InactivateChargeDialogComponent', () => {
   let component: InactivateChargeDialogComponent;
@@ -8,14 +10,18 @@ describe('InactivateChargeDialogComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [InactivateChargeDialogComponent]
+      ...getTestConfigModule(),
+      declarations: [InactivateChargeDialogComponent],
+      providers: [
+        ...(getTestConfigModule().providers || []),
+        { provide: MatDialogRef, useValue: { updateSize: () => {}, close: () => {} } },
+        { provide: MAT_DIALOG_DATA, useValue: {} }]
     }).compileComponents();
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(InactivateChargeDialogComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

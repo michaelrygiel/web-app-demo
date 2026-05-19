@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ShareAccountTableComponent } from './share-account-table.component';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('ShareAccountTableComponent', () => {
   let component: ShareAccountTableComponent;
@@ -8,6 +9,7 @@ describe('ShareAccountTableComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ShareAccountTableComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('ShareAccountTableComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ShareAccountTableComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

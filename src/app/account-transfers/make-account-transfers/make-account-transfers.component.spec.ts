@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MakeAccountTransfersComponent } from './make-account-transfers.component';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('MakeAccountTransfersComponent', () => {
   let component: MakeAccountTransfersComponent;
@@ -8,6 +9,7 @@ describe('MakeAccountTransfersComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [MakeAccountTransfersComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('MakeAccountTransfersComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(MakeAccountTransfersComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

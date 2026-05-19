@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NotificationsPageComponent } from './notifications-page.component';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('NotificationsPageComponent', () => {
   let component: NotificationsPageComponent;
@@ -8,6 +9,7 @@ describe('NotificationsPageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [NotificationsPageComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('NotificationsPageComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(NotificationsPageComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

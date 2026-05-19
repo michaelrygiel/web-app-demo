@@ -1,4 +1,5 @@
 import { PipesModule } from './pipes.module';
+import { getTestConfigModule } from '../testing/test-config';
 
 describe('PipesModule', () => {
   let pipesModule: PipesModule;

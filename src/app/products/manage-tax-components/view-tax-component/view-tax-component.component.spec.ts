@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ViewTaxComponentComponent } from './view-tax-component.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('ViewTaxComponentComponent', () => {
   let component: ViewTaxComponentComponent;
@@ -8,6 +9,7 @@ describe('ViewTaxComponentComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ViewTaxComponentComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('ViewTaxComponentComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ViewTaxComponentComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EditBusinessRuleParametersComponent } from './edit-business-rule-parameters.component';
+import { getTestConfigModule } from '../../../../../testing/test-config';
 
 describe('EditBusinessRuleParametersComponent', () => {
   let component: EditBusinessRuleParametersComponent;
@@ -8,6 +9,7 @@ describe('EditBusinessRuleParametersComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [EditBusinessRuleParametersComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('EditBusinessRuleParametersComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(EditBusinessRuleParametersComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

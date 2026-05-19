@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EditClientComponent } from './edit-client.component';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('EditClientComponent', () => {
   let component: EditClientComponent;
@@ -8,6 +9,7 @@ describe('EditClientComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [EditClientComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('EditClientComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(EditClientComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

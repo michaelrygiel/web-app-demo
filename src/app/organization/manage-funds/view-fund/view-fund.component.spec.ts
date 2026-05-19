@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ViewFundComponent } from './view-fund.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('ViewFundComponent', () => {
   let component: ViewFundComponent;
@@ -8,6 +9,7 @@ describe('ViewFundComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ViewFundComponent]
     }).compileComponents();
   });
@@ -15,7 +17,6 @@ describe('ViewFundComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ViewFundComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

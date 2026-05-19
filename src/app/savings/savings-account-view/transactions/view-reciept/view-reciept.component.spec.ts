@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ViewRecieptComponent } from './view-reciept.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('ViewRecieptComponent', () => {
   let component: ViewRecieptComponent;
@@ -8,6 +9,7 @@ describe('ViewRecieptComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ViewRecieptComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('ViewRecieptComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ViewRecieptComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

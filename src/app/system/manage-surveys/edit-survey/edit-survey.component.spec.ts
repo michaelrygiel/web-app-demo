@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EditSurveyComponent } from './edit-survey.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('EditSurveyComponent', () => {
   let component: EditSurveyComponent;
@@ -8,6 +9,7 @@ describe('EditSurveyComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [EditSurveyComponent]
     }).compileComponents();
   });
@@ -15,7 +17,6 @@ describe('EditSurveyComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(EditSurveyComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

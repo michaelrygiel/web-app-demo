@@ -1,4 +1,5 @@
 import { SettingsModule } from './settings.module';
+import { getTestConfigModule } from '../testing/test-config';
 
 describe('SettingsModule', () => {
   let settingsModule: SettingsModule;

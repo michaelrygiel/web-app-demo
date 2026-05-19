@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TenantSelectorComponent } from './tenant-selector.component';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('TenantSelectorComponent', () => {
   let component: TenantSelectorComponent;
@@ -8,6 +9,7 @@ describe('TenantSelectorComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [TenantSelectorComponent]
     }).compileComponents();
   });
@@ -15,7 +17,6 @@ describe('TenantSelectorComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(TenantSelectorComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

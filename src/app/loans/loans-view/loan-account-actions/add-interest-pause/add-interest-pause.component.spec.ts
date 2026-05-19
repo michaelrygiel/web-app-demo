@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AddInterestPauseComponent } from './add-interest-pause.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('AddInterestPauseComponent', () => {
   let component: AddInterestPauseComponent;
@@ -8,12 +9,12 @@ describe('AddInterestPauseComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [AddInterestPauseComponent]
     }).compileComponents();
 
     fixture = TestBed.createComponent(AddInterestPauseComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

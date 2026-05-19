@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { StepperButtonsComponent } from './stepper-buttons.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('StepperButtonsComponent', () => {
   let component: StepperButtonsComponent;
@@ -8,12 +9,12 @@ describe('StepperButtonsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [StepperButtonsComponent]
     }).compileComponents();
 
     fixture = TestBed.createComponent(StepperButtonsComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

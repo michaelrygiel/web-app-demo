@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SavingProductDatatableTabComponent } from './saving-product-datatable-tab.component';
+import { getTestConfigModule } from '../../../../testing/test-config';
 
 describe('SavingProductDatatableTabComponent', () => {
   let component: SavingProductDatatableTabComponent;
@@ -8,6 +9,7 @@ describe('SavingProductDatatableTabComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [SavingProductDatatableTabComponent]
     }).compileComponents();
   });
@@ -15,7 +17,6 @@ describe('SavingProductDatatableTabComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(SavingProductDatatableTabComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

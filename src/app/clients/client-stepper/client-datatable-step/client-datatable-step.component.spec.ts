@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ClientDatatableStepComponent } from './client-datatable-step.component';
+import { getTestConfigModule } from '../../../testing/test-config';
 
 describe('ClientDatatableStepComponent', () => {
   let component: ClientDatatableStepComponent;
@@ -8,6 +9,7 @@ describe('ClientDatatableStepComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [ClientDatatableStepComponent]
     }).compileComponents();
   });
@@ -15,7 +17,6 @@ describe('ClientDatatableStepComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ClientDatatableStepComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

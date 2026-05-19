@@ -1,3 +1,5 @@
+import { getTestConfigModule } from '../../testing/test-config';
+
 // import { TestBed, inject } from '@angular/core/testing';
 
 // import { AuthenticationService } from '../authentication/authentication.service';
@@ -10,13 +12,7 @@
 //   let route: Route;
 
 //   beforeEach(() => {
-//     TestBed.configureTestingModule({
-//       providers: [
-//         AuthenticationGuard,
-//         { provide: AuthenticationService, useClass: MockAuthenticationService },
-//         Route
-//       ]
-//     });
+//     TestBed.configureTestingModule(getTestConfigModule());
 //   });
 
 //   beforeEach(inject([Route], (_route: Route) => {

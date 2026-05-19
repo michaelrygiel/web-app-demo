@@ -1,3 +1,5 @@
+import { getTestConfigModule } from '../../testing/test-config';
+
 // import { TestBed, inject, fakeAsync, tick } from '@angular/core/testing';
 
 // import { AuthenticationService } from './authentication.service';
@@ -8,9 +10,7 @@
 //   let authenticationService: AuthenticationService;
 
 //   beforeEach(() => {
-//     TestBed.configureTestingModule({
-//       providers: [AuthenticationService]
-//     });
+//     TestBed.configureTestingModule(getTestConfigModule());
 //   });
 
 //   beforeEach(inject([

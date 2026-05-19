@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MemberGroupsComponent } from './member-groups.component';
+import { getTestConfigModule } from '../../testing/test-config';
 
 describe('MemberGroupsComponent', () => {
   let component: MemberGroupsComponent;
@@ -8,6 +9,7 @@ describe('MemberGroupsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      ...getTestConfigModule(),
       declarations: [MemberGroupsComponent]
     }).compileComponents();
   }));
@@ -15,7 +17,6 @@ describe('MemberGroupsComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(MemberGroupsComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {
