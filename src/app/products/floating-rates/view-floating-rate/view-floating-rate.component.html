@@ -6,7 +6,7 @@
 </div>
 
 <div class="container">
-  <mat-card>
+  <mat-card appearance="outlined">
     <mat-card-content>
       <div fxLayout="row wrap" class="content" fxLayout.lt-md="column">
         <div fxFlex="18%" class="mat-body-strong">{{ 'labels.inputs.Floating Rate Name' | translate }}:</div>
@@ -34,7 +34,7 @@
 
       <br />
 
-      <p class="mat-title">{{ 'labels.inputs.Floating Rate Periods' | translate }}</p>
+      <p class="mat-headline-6">{{ 'labels.inputs.Floating Rate Periods' | translate }}</p>
 
       <div class="mat-elevation-z8">
         <table mat-table [dataSource]="dataSource" matSort>

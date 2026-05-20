@@ -1,7 +1,7 @@
 <div class="container">
   <form [formGroup]="surveyForm" (ngSubmit)="submit()">
     <div fxLayout="column" fxLayoutGap="4%">
-      <mat-card>
+      <mat-card appearance="outlined">
         <mat-card-content>
           <div fxLayout="row wrap" fxLayoutGap="2%" fxLayout.lt-md="column">
             <mat-form-field fxFlex="48%">
@@ -73,6 +73,7 @@
 
       <div cdkDropList (cdkDropListDropped)="dropQuestion($event)" fxLayout="column" fxLayoutGap="4%">
         <mat-card
+          appearance="outlined"
           cdkDrag
           cdkDragLockAxis="y"
           formArrayName="questionDatas"

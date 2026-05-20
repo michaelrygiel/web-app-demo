@@ -1,5 +1,5 @@
 <div class="container">
-  <mat-card>
+  <mat-card appearance="outlined">
     <form [formGroup]="reportForm" (ngSubmit)="submit()">
       <mat-card-content>
         <div fxLayout="row wrap" fxLayout.lt-md="column" fxLayoutGap="4%">
@@ -80,7 +80,7 @@
         <br />
 
         <div fxLayout="row wrap" fxLayoutGap="60%" fxLayout.lt-md="column">
-          <p fxFlex="20%" class="mat-title">{{ 'labels.inputs.Report Parameters' | translate }}</p>
+          <p fxFlex="20%" class="mat-headline-6">{{ 'labels.inputs.Report Parameters' | translate }}</p>
 
           <button
             mat-raised-button
