@@ -1,13 +1,11 @@
 @use 'assets/styles/colours' as *;
 
-/* TODO(mdc-migration): The following rule targets internal classes of tabs that may no longer apply for the MDC version. */
-::ng-deep .mat-tab-body-wrapper {
+::ng-deep .mat-mdc-tab-body-wrapper {
   width: 96%;
   margin: auto;
 }
 
-/* TODO(mdc-migration): The following rule targets internal classes of tabs that may no longer apply for the MDC version. */
-::ng-deep .mat-tab-label.mat-tab-disabled {
+::ng-deep .mat-mdc-tab.mat-mdc-tab-disabled {
   padding: 0;
   margin: 0;
   justify-content: left;
