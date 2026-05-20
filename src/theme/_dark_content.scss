@@ -157,6 +157,8 @@ body.dark-theme {
   }
 
   // Override the background color of the label text for dark theme
+
+  /* TODO(mdc-migration): The following rule targets internal classes of form-field that may no longer apply for the MDC version. */
   .mat-option-text,
   .mat-input-element,
   .mat-form-field-label {
@@ -164,8 +166,8 @@ body.dark-theme {
   }
 
   mifosx-popover,
-  .mat-menu-content,
-  .mat-dialog-container {
+  .mat-mdc-menu-content,
+  .mat-mdc-dialog-container {
     background-color: #303135;
     color: white;
   }
@@ -175,11 +177,12 @@ body.dark-theme {
   .mat-calendar-body-cell,
   .mat-calendar-body-label,
   .mat-calendar-table,
-  .mat-list-item.active {
+  .mat-mdc-list-item.active {
     background-color: #303135;
     border: none;
   }
 
+  /* TODO(mdc-migration): The following rule targets internal classes of tabs that may no longer apply for the MDC version. */
   .mat-tab-label-active {
     border-bottom: lightgray;
   }
@@ -205,7 +208,7 @@ body.dark-theme {
     color: #303135;
   }
 
-  a.mat-tab-link,
+  a.mat-mdc-tab-link,
   a.tab-link {
     color: white !important;
   }
@@ -225,7 +228,7 @@ body.dark-theme {
   #footer {
     color: white;
 
-    .mat-checkbox {
+    .mat-mdc-checkbox {
       color: white !important;
     }
 

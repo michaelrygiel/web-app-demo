@@ -31,7 +31,7 @@ span {
   margin: 0.5em 0;
 }
 
-.mat-card .mat-divider-horizontal.mat-divider-inset {
+.mat-mdc-card .mat-divider-horizontal.mat-divider-inset {
   margin: 0 0 0.5em;
 }
 
@@ -53,7 +53,7 @@ table {
       overflow: hidden;
     }
 
-    .mat-card {
+    .mat-mdc-card {
       border-radius: 0;
 
       > h4 {
