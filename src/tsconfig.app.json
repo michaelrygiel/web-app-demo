@@ -6,8 +6,7 @@
     "types": ["node"]
   },
   "angularCompilerOptions": {
-    "enableIvy": true,
-    "fullTemplateTypeCheck": false,
+    "strictTemplates": false,
     "preserveWhitespaces": true
   },
   "files": [

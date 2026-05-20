@@ -17,6 +17,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { LoanTransactionType } from 'app/loans/models/loan-transaction-type.model';
 import { AlertService } from 'app/core/alert/alert.service';
 import { TranslateService } from '@ngx-translate/core';
+import { firstValueFrom } from 'rxjs';
 
 /** Custom Dialogs */
 
@@ -116,12 +117,9 @@ export class ViewTransactionComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.allowChargeback) {
-      this.organizationService
-        .getPaymentTypesWithCode()
-        .toPromise()
-        .then((data) => {
-          this.paymentTypeOptions = data;
-        });
+      firstValueFrom(this.organizationService.getPaymentTypesWithCode()).then((data) => {
+        this.paymentTypeOptions = data;
+      });
     }
   }
 

@@ -13,10 +13,7 @@ module.exports = (config: any) => {
     ],
 
     // list of files / patterns to load in the browser
-    files: [
-      { pattern: 'src/**/*spec.ts', type: 'js' },
-      { pattern: 'src/**/*.ts', type: 'js' }
-    ],
+    files: [],
 
     // list of files / patterns to exclude
     exclude: [],
