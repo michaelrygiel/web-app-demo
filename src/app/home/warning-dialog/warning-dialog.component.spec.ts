@@ -1,2 +1,2 @@
 import { getTestConfigModule } from '../../testing/test-config';
-import { MatDialogRef } from '@angular/material/dialog';
+import { MatLegacyDialogRef as MatDialogRef } from '@angular/material/legacy-dialog';
