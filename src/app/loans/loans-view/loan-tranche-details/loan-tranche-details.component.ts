@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
+import { firstValueFrom } from 'rxjs';
 import { Dates } from 'app/core/utils/dates';
 import { LoansService } from 'app/loans/loans.service';
 import { SettingsService } from 'app/settings/settings.service';
@@ -40,17 +41,13 @@ export class LoanTrancheDetailsComponent implements OnInit {
   disallowExpectedDisbursements = false;
   pristine = true;
 
-  /**
-   * Retrieves the loans data from `resolve`.
-   * @param {ActivatedRoute} route Activated Route.
-   */
-  constructor(
-    private route: ActivatedRoute,
-    public dialog: MatDialog,
-    private loanServices: LoansService,
-    private settingsService: SettingsService,
-    private dateUtils: Dates
-  ) {
+  private route = inject(ActivatedRoute);
+  dialog = inject(MatDialog);
+  private loanServices = inject(LoansService);
+  private settingsService = inject(SettingsService);
+  private dateUtils = inject(Dates);
+
+  constructor() {
     this.route.parent.data.subscribe((data: { loanDetailsData: any }) => {
       this.loanId = data.loanDetailsData.id;
       this.loanDetails = data.loanDetailsData;
@@ -134,7 +131,6 @@ export class LoanTrancheDetailsComponent implements OnInit {
         required: true,
         order: 2
       })
-
     ];
     return formBase;
   }
@@ -222,11 +218,8 @@ export class LoanTrancheDetailsComponent implements OnInit {
       dateFormat: this.settingsService.dateFormat,
       locale: this.settingsService.language.code
     };
-    this.loanServices
-      .editDisbursements(this.loanId, payload)
-      .toPromise()
-      .then((result) => {
-        this.pristine = true;
-      });
+    firstValueFrom(this.loanServices.editDisbursements(this.loanId, payload)).then((result) => {
+      this.pristine = true;
+    });
   }
 }

@@ -1,7 +1,8 @@
 /** Angular Imports */
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
+import { firstValueFrom } from 'rxjs';
 
 /** Custom Services */
 import { LoansService } from 'app/loans/loans.service';
@@ -55,27 +56,17 @@ export class ViewTransactionComponent implements OnInit {
   clientId: number;
   loanId: number;
 
-  /**
-   * Retrieves the Transaction data from `resolve`.
-   * @param {LoansService} loansService Loans Service
-   * @param {ActivatedRoute} route Activated Route.
-   * @param {Router} router Router for navigation.
-   * @param {MatDialog} dialog Dialog reference.
-   * @param {Dates} dateUtils Date Utils.
-   * @param {SettingsService} settingsService Settings Service
-   * @param {AlertService} alertService Alert Service
-   */
-  constructor(
-    private loansService: LoansService,
-    private route: ActivatedRoute,
-    private dateUtils: Dates,
-    private router: Router,
-    public dialog: MatDialog,
-    private translateService: TranslateService,
-    private settingsService: SettingsService,
-    private organizationService: OrganizationService,
-    private alertService: AlertService
-  ) {
+  private loansService = inject(LoansService);
+  private route = inject(ActivatedRoute);
+  private dateUtils = inject(Dates);
+  private router = inject(Router);
+  dialog = inject(MatDialog);
+  private translateService = inject(TranslateService);
+  private settingsService = inject(SettingsService);
+  private organizationService = inject(OrganizationService);
+  private alertService = inject(AlertService);
+
+  constructor() {
     this.route.data.subscribe((data: { loansAccountTransaction: any }) => {
       this.transactionData = data.loansAccountTransaction;
       this.transactionType = this.transactionData.type;
@@ -116,12 +107,9 @@ export class ViewTransactionComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.allowChargeback) {
-      this.organizationService
-        .getPaymentTypesWithCode()
-        .toPromise()
-        .then((data) => {
-          this.paymentTypeOptions = data;
-        });
+      firstValueFrom(this.organizationService.getPaymentTypesWithCode()).then((data) => {
+        this.paymentTypeOptions = data;
+      });
     }
   }
 
@@ -214,7 +202,6 @@ export class ViewTransactionComponent implements OnInit {
         max: this.amountRelationsAllowed,
         order: 2
       })
-
     ];
     const data = {
       title: `Chargeback ${this.transactionType.value} Transaction`,
