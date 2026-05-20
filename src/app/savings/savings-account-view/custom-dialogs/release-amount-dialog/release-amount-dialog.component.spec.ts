@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ReleaseAmountDialogComponent } from './release-amount-dialog.component';
 import { getTestConfigModule } from '../../../../testing/test-config';
-import { MatLegacyDialogRef as MatDialogRef } from '@angular/material/legacy-dialog';
+import { MatDialogRef } from '@angular/material/dialog';
 
 describe('ReleaseAmountDialogComponent', () => {
   let component: ReleaseAmountDialogComponent;

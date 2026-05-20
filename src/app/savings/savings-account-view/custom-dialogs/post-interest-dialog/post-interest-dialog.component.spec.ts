@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PostInterestDialogComponent } from './post-interest-dialog.component';
 import { getTestConfigModule } from '../../../../testing/test-config';
-import { MatLegacyDialogRef as MatDialogRef } from '@angular/material/legacy-dialog';
+import { MatDialogRef } from '@angular/material/dialog';
 
 describe('PostInterestDialogComponent', () => {
   let component: PostInterestDialogComponent;

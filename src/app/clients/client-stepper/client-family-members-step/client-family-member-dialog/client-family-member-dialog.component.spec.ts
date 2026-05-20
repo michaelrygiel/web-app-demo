@@ -2,10 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ClientFamilyMemberDialogComponent } from './client-family-member-dialog.component';
 import { getTestConfigModule } from '../../../../testing/test-config';
-import {
-  MatLegacyDialogRef as MatDialogRef,
-  MAT_LEGACY_DIALOG_DATA as MAT_DIALOG_DATA
-} from '@angular/material/legacy-dialog';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 describe('ClientFamilyMemberDialogComponent', () => {
   let component: ClientFamilyMemberDialogComponent;

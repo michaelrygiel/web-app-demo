@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RunSelectedJobsPopoverComponent } from './run-selected-jobs-popover.component';
 import { getTestConfigModule } from '../../../../testing/test-config';
-import { MAT_LEGACY_DIALOG_DATA as MAT_DIALOG_DATA } from '@angular/material/legacy-dialog';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 describe('RunSelectedJobsPopoverComponent', () => {
   let component: RunSelectedJobsPopoverComponent;

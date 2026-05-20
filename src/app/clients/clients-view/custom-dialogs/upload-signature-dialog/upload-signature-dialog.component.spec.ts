@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UploadSignatureDialogComponent } from './upload-signature-dialog.component';
 import { getTestConfigModule } from '../../../../testing/test-config';
-import { MatLegacyDialogRef as MatDialogRef } from '@angular/material/legacy-dialog';
+import { MatDialogRef } from '@angular/material/dialog';
 
 describe('UploadSignatureDialogComponent', () => {
   let component: UploadSignatureDialogComponent;
