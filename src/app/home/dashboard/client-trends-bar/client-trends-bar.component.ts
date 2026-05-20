@@ -12,7 +12,8 @@ import { HomeService } from '../../home.service';
 
 /** Charting Imports */
 import { Dates } from 'app/core/utils/dates';
-import Chart from 'chart.js';
+import { Chart, registerables } from 'chart.js';
+Chart.register(...registerables);
 
 /**
  * Client Trends Bar Chart Component.

@@ -8,7 +8,8 @@ import { ReportsService } from '../../reports.service';
 import { ChartData } from '../../common-models/chart-data.model';
 
 /** Charting Imports */
-import Chart from 'chart.js';
+import { Chart, registerables } from 'chart.js';
+Chart.register(...registerables);
 
 /**
  * Chart Component
