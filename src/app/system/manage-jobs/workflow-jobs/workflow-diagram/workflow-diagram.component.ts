@@ -35,7 +35,7 @@ export class WorkflowDiagramComponent implements OnInit {
       '#C7B42C'
     ]
   };
-  center$ = new Subject<any>();
+  center$ = new Subject<void>();
 
   constructor() {}
 
