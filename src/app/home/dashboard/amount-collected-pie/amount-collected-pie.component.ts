@@ -7,7 +7,8 @@ import { ActivatedRoute } from '@angular/router';
 import { HomeService } from '../../home.service';
 
 /** Charting Imports */
-import Chart from 'chart.js';
+import { Chart, registerables } from 'chart.js';
+Chart.register(...registerables);
 
 /**
  * Amount Collected Pie Chart Component
@@ -81,16 +82,10 @@ export class AmountCollectedPieComponent implements OnInit {
       this.chart = new Chart('collection-pie', {
         type: 'doughnut',
         data: {
-          labels: [
-            'Pending',
-            'Collected'
-          ],
+          labels: ['Pending', 'Collected'],
           datasets: [
             {
-              backgroundColor: [
-                'dodgerblue',
-                'red'
-              ],
+              backgroundColor: ['dodgerblue', 'red'],
               data: data
             }
           ]

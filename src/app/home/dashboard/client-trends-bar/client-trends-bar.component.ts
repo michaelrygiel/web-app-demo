@@ -12,7 +12,8 @@ import { HomeService } from '../../home.service';
 
 /** Charting Imports */
 import { Dates } from 'app/core/utils/dates';
-import Chart from 'chart.js';
+import { Chart, registerables } from 'chart.js';
+Chart.register(...registerables);
 
 /**
  * Client Trends Bar Chart Component.
@@ -77,10 +78,7 @@ export class ClientTrendsBarComponent implements OnInit {
           case 'Day':
             const clientsByDay = this.homeService.getClientTrendsByDay(officeId);
             const loansByDay = this.homeService.getLoanTrendsByDay(officeId);
-            forkJoin([
-              clientsByDay,
-              loansByDay
-            ]).subscribe((data: any[]) => {
+            forkJoin([clientsByDay, loansByDay]).subscribe((data: any[]) => {
               const dayLabels = this.getLabels(timescale);
               const clientCounts = this.getCounts(data[0], dayLabels, timescale, 'client');
               const loanCounts = this.getCounts(data[1], dayLabels, timescale, 'loan');
@@ -91,10 +89,7 @@ export class ClientTrendsBarComponent implements OnInit {
           case 'Week':
             const clientsByWeek = this.homeService.getClientTrendsByWeek(officeId);
             const loansByWeek = this.homeService.getLoanTrendsByWeek(officeId);
-            forkJoin([
-              clientsByWeek,
-              loansByWeek
-            ]).subscribe((data: any[]) => {
+            forkJoin([clientsByWeek, loansByWeek]).subscribe((data: any[]) => {
               const weekLabels = this.getLabels(timescale);
               const clientCounts = this.getCounts(data[0], weekLabels, timescale, 'client');
               const loanCounts = this.getCounts(data[1], weekLabels, timescale, 'loan');
@@ -105,10 +100,7 @@ export class ClientTrendsBarComponent implements OnInit {
           case 'Month':
             const clientsByMonth = this.homeService.getClientTrendsByMonth(officeId);
             const loansByMonth = this.homeService.getLoanTrendsByMonth(officeId);
-            forkJoin([
-              clientsByMonth,
-              loansByMonth
-            ]).subscribe((data: any[]) => {
+            forkJoin([clientsByMonth, loansByMonth]).subscribe((data: any[]) => {
               const monthLabels = this.getLabels(timescale);
               const clientCounts = this.getCounts(data[0], monthLabels, timescale, 'client');
               const loanCounts = this.getCounts(data[1], monthLabels, timescale, 'loan');

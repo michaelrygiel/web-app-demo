@@ -17,10 +17,7 @@ export class JobStep {
 export class WorkflowDiagramComponent implements OnInit {
   @Input() jobStepsData: JobStep[] = [];
 
-  diagramSize: [number, number] = [
-    1024,
-    300
-  ];
+  diagramSize: [number, number] = [1024, 300];
   public nodes: Node[] = [];
   public links: Edge[] = [];
   public layoutSettings = {
@@ -29,11 +26,7 @@ export class WorkflowDiagramComponent implements OnInit {
   public curve: any = shape.curveLinear;
   public layout: Layout = new DagreNodesOnlyLayout();
   colorScheme = {
-    domain: [
-      '#5AA454',
-      '#A10A28',
-      '#C7B42C'
-    ]
+    domain: ['#5AA454', '#A10A28', '#C7B42C']
   };
   center$ = new Subject<any>();
 
@@ -70,7 +63,7 @@ export class WorkflowDiagramComponent implements OnInit {
       nodeCounter++;
     }
     // trigger center
-    this.center$.next();
+    this.center$.next(true);
   }
 
   public getStyles(node: Node): any {
